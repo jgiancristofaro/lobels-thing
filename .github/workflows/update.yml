@@ -6,8 +6,8 @@ on:
     - cron: "17 11 * * 1-5"   # morning refresh for overnight markets + FRED releases
   workflow_dispatch:
   push:
-    branches: [claude/druckenmiller-charts-dashboard-cv3595]
-    paths: ["pipeline/**", ".github/workflows/update.yml"]
+    branches: [main]
+    paths: ["pipeline/**", "site/**", ".github/workflows/update.yml"]
 
 permissions:
   contents: write

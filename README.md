@@ -36,12 +36,18 @@ The page opens with:
 
 ## Getting the public URL (GitHub Pages)
 
-1. Create a new **public** GitHub repo (for example `macro-tape`) and push this project to its `main` branch.
-2. In the repo, go to **Settings → Pages → Build and deployment → Source** and pick **GitHub Actions**.
-3. In `.github/workflows/update.yml`, change the `push: branches:` entry to `main`.
-4. Optional but recommended: get a free FRED API key (fred.stlouisfed.org → My Account → API Keys) and add it as a repo secret named `FRED_API_KEY`. FRED blocks keyless requests from GitHub's servers. The key adds credit spreads, the Fed balance sheet, net liquidity, jobless claims and the other monthly macro series. Rates, TGA, reverse repo, mortgages, CPI and jobs come from keyless Treasury/NY Fed/Freddie Mac/BLS sources either way.
-5. Run the workflow once from **Actions → Update dashboard data → Run workflow**.
-6. The site is live at `https://<your-user>.github.io/macro-tape/`. On a phone, use **Add to Home Screen**.
+This repo is public and everything lives on `main`, so only one manual step is needed
+(GitHub doesn't expose it through the API, so it can't be automated from here):
+
+1. Go to **[Settings → Pages](../../settings/pages)** and under **Build and deployment → Source**, pick **GitHub Actions**. This is a one-time toggle.
+2. That's it — the next push to `main`, the next scheduled run, or a manual **Actions → Update dashboard data → Run workflow** will publish the site.
+3. The site is live at `https://<owner>.github.io/<repo>/` (check the **Pages** settings page for the exact URL once step 1 is done). On a phone, use **Add to Home Screen**.
+
+Optional but recommended: get a free FRED API key (fred.stlouisfed.org → My Account → API Keys)
+and add it as a repo secret named `FRED_API_KEY` (**Settings → Secrets and variables → Actions**).
+FRED blocks keyless requests from GitHub's servers. The key adds credit spreads, the Fed balance
+sheet, net liquidity, jobless claims and the other monthly macro series. Rates, TGA, reverse repo,
+mortgages, CPI and jobs come from keyless Treasury/NY Fed/Freddie Mac/BLS sources either way.
 
 ## Local preview
 

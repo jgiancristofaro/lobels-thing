@@ -53,7 +53,7 @@ button{font:inherit;color:inherit}
 .nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 .nav a{font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink2);text-decoration:none;padding:6px 10px;border-radius:6px;white-space:nowrap}
 .nav a:hover{background:var(--surface)}
-@media (max-width:640px){.brand small{display:none}.brand{font-size:18px}.nav a{padding:6px 6px;font-size:12.5px}}
+@media (max-width:640px){.brand small{display:none}.brand{font-size:17px}.nav{gap:0}.nav a{padding:6px 5px;font-size:12px}}
 
 /* ---------- hero: regime + read ---------- */
 .hero{display:grid;grid-template-columns:300px 1fr;gap:28px;padding-block:24px 8px;align-items:start}
@@ -74,6 +74,11 @@ button{font:inherit;color:inherit}
 .read .summary{font-size:16px;color:var(--ink2);max-width:68ch;margin-top:12px}
 .read .summary p{margin:0 0 10px}
 .asof{font-size:12px;color:var(--muted);margin-top:8px}
+.quick{list-style:none;margin:16px 0 4px;padding:0;display:grid;gap:6px;max-width:68ch}
+.quick a{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;color:var(--ink);text-decoration:none;font-size:14.5px;font-weight:500}
+.quick a:hover{border-color:var(--accent)}
+.quick .dir{text-align:center}
+.quick .conv{margin:0}
 
 /* ---------- sections ---------- */
 section{padding-top:28px}
@@ -177,7 +182,7 @@ section{padding-top:28px}
 <header class="top"><div class="in">
   <div class="brand">Macro Tape<small>the Druckenmiller-style daily scan</small></div>
   <nav class="nav">
-    <a href="#trades">Trades</a><a href="#goodbad">Good/Bad</a><a href="#flags">Turning</a><a href="#charts">Charts</a>
+    <a href="#trades">Trades</a><a href="#goodbad">Good/bad</a><a href="#flags">Turning</a><a href="#charts">Charts</a>
   </nav>
 </div></header>
 
@@ -271,26 +276,30 @@ function worsening(s){
   const m1 = s.pol*s.chg.m1, prior = s.pol*(s.chg.m3 - s.chg.m1);
   return (m1 < 0 && prior > 0) ? (s.z1m ? Math.abs(s.z1m) : 0.5) : 0;
 }
+// near-duplicates of another series; keep them out of the flag lists
+const DUPES = new Set(["GLD","GDXJ","IBIT","SOXX","VIX3M","SPY","QQQ","IWM","KBE","ITB","IEF","EWG","EWJ","EWY","EWT","EWZ","EWW","INDA"]);
 function flags(){
-  const all = D.series;
+  const all = D.series.filter(s => !DUPES.has(s.id));
   const onCome = [
-    ...all.filter(s => macroGroups.has(s.group) && (s.state === "turning_up" && s.pol > 0 || s.state === "rolling_over" && s.pol < 0)),
+    ...all.filter(s => macroGroups.has(s.group) && (s.state === "turning_up" && s.pol > 0 || s.state === "rolling_over" && s.pol < 0) && s.pol * (s.chg.m1 ?? 0) > 0),
     ...all.filter(s => eqGroups.has(s.group) && s.rs && s.rs.state === "turning_up" && s.rs.chg1m > 0),
     ...all.filter(s => macroGroups.has(s.group) && improving(s) > 0.8),
   ];
   const fading = [
-    ...all.filter(s => macroGroups.has(s.group) && (s.state === "rolling_over" && s.pol > 0 || s.state === "turning_up" && s.pol < 0)),
+    ...all.filter(s => macroGroups.has(s.group) && (s.state === "rolling_over" && s.pol > 0 || s.state === "turning_up" && s.pol < 0) && s.pol * (s.chg.m1 ?? 0) < 0),
     ...all.filter(s => eqGroups.has(s.group) && s.rs && s.rs.state === "rolling_over" && s.rs.chg1m < 0),
     ...all.filter(s => macroGroups.has(s.group) && worsening(s) > 0.8),
   ];
   const uniq = a => [...new Map(a.map(s=>[s.id,s])).values()];
   const rank = s => Math.abs(s.z1m || 0) + Math.abs(s.rs?.chg1m || 0)/5;
   const accel = all.filter(s => s.accelZ != null && Math.abs(s.accelZ) >= 1.6 && s.group !== "stocks")
-    .sort((a,b)=>Math.abs(b.accelZ)-Math.abs(a.accelZ)).slice(0,10);
+    .sort((a,b)=>Math.abs(b.accelZ)-Math.abs(a.accelZ));
+  const accelCapped = (() => { const per = {}; return accel.filter(s => (per[s.group] = (per[s.group]||0) + 1) <= 3).slice(0,10); })();
+  const capped = list => { const per = {}; return list.filter(s => (per[s.group] = (per[s.group]||0) + 1) <= 2); };
   return {
-    onCome: uniq(onCome).sort((a,b)=>rank(b)-rank(a)).slice(0,10),
-    fading: uniq(fading).sort((a,b)=>rank(b)-rank(a)).slice(0,10),
-    accel,
+    onCome: capped(uniq(onCome).sort((a,b)=>rank(b)-rank(a))).slice(0,10),
+    fading: capped(uniq(fading).sort((a,b)=>rank(b)-rank(a))).slice(0,10),
+    accel: accelCapped,
   };
 }
 function accelTag(s){
@@ -321,10 +330,10 @@ function chipFor(id){
   return `<button class="chip" data-id="${id}"><span>${esc(s.name.length>26? s.id : s.name)}</span>
     <span class="num">${fmtVal(s)}</span><span class="num ${chgClass(s,s.chg.m1)}">${fmtChg(s,s.chg.m1)} 1m</span></button>`;
 }
-function tradeHTML(t){
+function tradeHTML(t, i){
   const dir = (t.dir||"").toLowerCase();
   const conv = [1,2,3].map(i=>`<b class="${i<=(t.conviction||1)?"on":""}"></b>`).join("");
-  return `<article class="trade">
+  return `<article class="trade" id="trade-${i}">
     <div class="hd"><span class="dir ${dir}">${esc(t.dir)}</span><h3>${esc(t.name)}</h3>
       <span class="conv" title="Conviction">${conv}</span></div>
     <div class="expr">${esc(t.expr)}</div>
@@ -359,6 +368,7 @@ $("#app").innerHTML = `
   <div class="read">
     <div class="eyebrow">The read${notesDate?` · ${notesDate}`:""}</div>
     <h1>${esc(N.headline || "Today's tape")}</h1>
+    ${(N.trades||[]).length ? `<ol class="quick" aria-label="Trade ideas at a glance">${N.trades.map((t,i)=>`<li><a href="#trade-${i}"><span class="dir ${(t.dir||"").toLowerCase()}">${esc(t.dir)}</span><span>${esc(t.line||t.name)}</span><span class="conv" title="Conviction">${[1,2,3].map(k=>`<b class="${k<=(t.conviction||1)?"on":""}"></b>`).join("")}</span></a></li>`).join("")}</ol>` : ""}
     <div class="summary">${(N.summary||[]).map(p=>`<p>${esc(p)}</p>`).join("")}</div>
     <div class="asof">Data refreshed ${gen.toLocaleString("en-US",{dateStyle:"medium",timeStyle:"short"})} · ${D.series.length} series${D.missing?.length?` · ${D.missing.length} unavailable`:""}</div>
   </div>
@@ -366,7 +376,7 @@ $("#app").innerHTML = `
 
 <section id="trades">
   <div class="sh"><h2>Trade ideas</h2><p>The few things that matter most right now, and how to get paid for them. Tap any chip for the chart.</p></div>
-  <div class="trades">${(N.trades||[]).map(tradeHTML).join("") || `<p class="muted">No trade notes yet.</p>`}</div>
+  <div class="trades">${(N.trades||[]).map((t,i)=>tradeHTML(t,i)).join("") || `<p class="muted">No trade notes yet.</p>`}</div>
 </section>
 
 <section id="goodbad">
@@ -380,8 +390,8 @@ $("#app").innerHTML = `
 <section id="flags">
   <div class="sh"><h2>What's turning</h2><p>Found automatically in the data each day. "On the come" means improving after a worse stretch, or newly beating the S&P. Acceleration is the change in the rate of change, and it can be bad.</p></div>
   <div class="cols3">
-    <div class="panel"><h3><span class="dot" style="background:var(--accent)"></span>On the come</h3><ul>${F.onCome.map(s=>line(s, s.rs && eqGroups.has(s.group) ? ` <span class="tag good">RS ${s.rs.chg1m>0?"+":""}${s.rs.chg1m}% 1m</span>`:"")).join("")}</ul></div>
-    <div class="panel"><h3><span class="dot" style="background:var(--warn)"></span>Rolling over</h3><ul>${F.fading.map(s=>line(s, s.rs && eqGroups.has(s.group) ? ` <span class="tag bad">RS ${s.rs.chg1m}% 1m</span>`:"")).join("")}</ul></div>
+    <div class="panel"><h3><span class="dot" style="background:var(--accent)"></span>On the come</h3><ul>${F.onCome.map(s=>line(s, s.rs && eqGroups.has(s.group) ? ` <span class="tag good">RS ${s.rs.chg1m>0?"+":""}${s.rs.chg1m.toFixed(1)}% 1m</span>`:"")).join("")}</ul></div>
+    <div class="panel"><h3><span class="dot" style="background:var(--warn)"></span>Rolling over</h3><ul>${F.fading.map(s=>line(s, s.rs && eqGroups.has(s.group) ? ` <span class="tag bad">RS ${s.rs.chg1m.toFixed(1)}% 1m</span>`:"")).join("")}</ul></div>
     <div class="panel"><h3><span class="dot" style="background:var(--ink2)"></span>Accelerating</h3><ul>${F.accel.map(s=>line(s, accelTag(s))).join("")}</ul></div>
   </div>
 </section>

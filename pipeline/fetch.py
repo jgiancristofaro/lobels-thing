@@ -28,7 +28,7 @@ CHART_DAYS = 800  # ~2.2 years of history shipped to the page
 PCT_LEVEL = {"DFF", "SOFR", "DGS3MO", "DGS2", "DGS5", "DGS10", "DGS30", "T10Y2Y", "T10Y3M", "DFII10",
              "T5YIE", "T10YIE", "MORTGAGE30US", "HYOAS", "IGOAS", "CCCOAS", "BBBOAS", "UNRATE", "TCU"}
 # Index-point series where absolute (not %) change is meaningful.
-IDX_LEVEL = {"NFCI", "STLFSI4"}
+IDX_LEVEL = {"NFCI", "STLFSI4", "RRPONTSYD"}
 # Price indexes shown as year-over-year % instead of level.
 YOY = {"CPI", "CORECPI", "COREPCE", "M2SL", "RETAIL", "INDPRO", "PAYEMS"}
 EQUITY_GROUPS = {"sectors", "industries", "global", "stocks", "crypto"}
@@ -349,7 +349,7 @@ def analyze(item, s, spy):
     pol = item["pol"]
     score = None
     if pol and z1m is not None:
-        score = pol * (0.5 * max(-3, min(3, z1m)) / 1.5 + 0.5 * STATE_SCORE[state])
+        score = pol * (0.5 * max(-3, min(3, z1m)) / 3 + 0.5 * STATE_SCORE[state])
 
     chart = s[s.index >= s.index[-1] - timedelta(days=CHART_DAYS)]
     return dict(
@@ -393,7 +393,7 @@ def composite(series_by_id, ids):
         pol = COMPOSITE_POL.get(i, x["pol"])
         if not pol:
             continue
-        vals.append(pol * (0.5 * max(-3, min(3, x["z1m"])) / 1.5 + 0.5 * STATE_SCORE[x["state"]]))
+        vals.append(pol * (0.5 * max(-3, min(3, x["z1m"])) / 3 + 0.5 * STATE_SCORE[x["state"]]))
     return round(100 * sum(vals) / len(vals)) if vals else None
 
 

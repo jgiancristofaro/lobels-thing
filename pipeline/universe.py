@@ -35,9 +35,9 @@ def add(id, name, src, sym, group, pol, why=""):
 
 
 # ---------------- Liquidity & Fed ----------------
-add("WALCL", "Fed balance sheet", "fred", "WALCL", "liquidity", 1, "QE/QT: the tide under every asset")
-add("WTREGEN", "Treasury General Account", "fred", "WTREGEN", "liquidity", -1, "TGA rebuilds drain reserves")
-add("RRPONTSYD", "Reverse repo facility", "fred", "RRPONTSYD", "liquidity", -1, "Spare cash parked at the Fed")
+add("WALCL", "Fed balance sheet ($mn)", "fred", "WALCL", "liquidity", 1, "QE/QT: the tide under every asset")
+add("WTREGEN", "Treasury cash balance (TGA, $mn)", "fred", "WTREGEN", "liquidity", -1, "TGA rebuilds drain reserves")
+add("RRPONTSYD", "Reverse repo facility ($bn)", "fred", "RRPONTSYD", "liquidity", -1, "Spare cash parked at the Fed")
 add("NETLIQ", "Net liquidity (BS - TGA - RRP)", "netliq", "", "liquidity", 1, "Druck's core liquidity gauge")
 add("WRESBAL", "Bank reserves", "fred", "WRESBAL", "liquidity", 1, "Scarce reserves = funding stress")
 add("M2SL", "M2 money supply", "fred", "M2SL", "liquidity", 1, "Broad money growth")

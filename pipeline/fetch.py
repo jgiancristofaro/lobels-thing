@@ -5,6 +5,7 @@ internet access to Yahoo Finance and FRED; no API keys.
 """
 import io
 import json
+import os
 import math
 import sys
 import time
@@ -36,22 +37,153 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; macro-dashboard/1.0)"}
 
 
 # ------------------------------------------------------------------ fetching
+FRED_KEY = os.environ.get("FRED_API_KEY", "").strip()
+_fred_csv_failures = 0
+
+
 def fetch_fred(code):
-    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={code}"
-    for attempt in range(3):
-        try:
-            r = requests.get(url, headers=UA, timeout=25)
-            r.raise_for_status()
-            df = pd.read_csv(io.StringIO(r.text))
-            df.columns = ["date", "v"]
-            df["date"] = pd.to_datetime(df["date"])
-            df["v"] = pd.to_numeric(df["v"], errors="coerce")
-            s = df.dropna().set_index("date")["v"]
-            return s[s.index >= pd.Timestamp.now() - pd.DateOffset(years=HISTORY_YEARS + 1)]
-        except Exception as e:  # noqa: BLE001
-            print(f"  FRED {code} attempt {attempt + 1} failed: {e}")
-            time.sleep(2 + 2 * attempt)
-    return None
+    """FRED via the official API when FRED_API_KEY is set, else the public CSV endpoint.
+
+    The public CSV endpoint often stalls for cloud IPs (GitHub runners included), so after a
+    few consecutive failures it is skipped and the keyless fallbacks below fill the gaps.
+    """
+    global _fred_csv_failures
+    start = (pd.Timestamp.now() - pd.DateOffset(years=HISTORY_YEARS + 1)).strftime("%Y-%m-%d")
+    if FRED_KEY:
+        for attempt in range(3):
+            try:
+                r = requests.get("https://api.stlouisfed.org/fred/series/observations", timeout=30, params=dict(
+                    series_id=code, api_key=FRED_KEY, file_type="json", observation_start=start))
+                r.raise_for_status()
+                obs = r.json()["observations"]
+                s = pd.Series({pd.Timestamp(o["date"]): pd.to_numeric(o["value"], errors="coerce") for o in obs})
+                return s.dropna()
+            except Exception as e:  # noqa: BLE001
+                print(f"  FRED API {code} attempt {attempt + 1} failed: {e}")
+                time.sleep(1 + attempt)
+        return None
+    if _fred_csv_failures >= 4:
+        return None
+    try:
+        r = requests.get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={code}&cosd={start}", headers=UA, timeout=12)
+        r.raise_for_status()
+        df = pd.read_csv(io.StringIO(r.text))
+        df.columns = ["date", "v"]
+        df["date"] = pd.to_datetime(df["date"])
+        df["v"] = pd.to_numeric(df["v"], errors="coerce")
+        _fred_csv_failures = 0
+        return df.dropna().set_index("date")["v"]
+    except Exception as e:  # noqa: BLE001
+        _fred_csv_failures += 1
+        print(f"  FRED csv {code} failed: {e}")
+        return None
+
+
+# ---------------------------------------------------------- keyless fallbacks
+def fetch_treasury_curves():
+    """Daily nominal and real (TIPS) par yield curves from the US Treasury."""
+    nominal, real = [], []
+    for year in range(pd.Timestamp.now().year - HISTORY_YEARS, pd.Timestamp.now().year + 1):
+        for kind, out in (("daily_treasury_yield_curve", nominal), ("daily_treasury_real_yield_curve", real)):
+            url = ("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
+                   f"daily-treasury-rates.csv/{year}/all?type={kind}&field_tdr_date_value={year}&page&_format=csv")
+            try:
+                r = requests.get(url, headers=UA, timeout=40)
+                r.raise_for_status()
+                df = pd.read_csv(io.StringIO(r.text))
+                df.columns = [c.strip().lower().replace(" ", "") for c in df.columns]
+                df["date"] = pd.to_datetime(df["date"])
+                out.append(df.set_index("date"))
+            except Exception as e:  # noqa: BLE001
+                print(f"  Treasury {kind} {year} failed: {e}")
+    res = {}
+    if nominal:
+        n = pd.concat(nominal).sort_index()
+        n = n[~n.index.duplicated(keep="last")]
+        col = lambda c: pd.to_numeric(n[c], errors="coerce").dropna() if c in n else None  # noqa: E731
+        for sid, c in (("DGS3MO", "3mo"), ("DGS2", "2yr"), ("DGS5", "5yr"), ("DGS10", "10yr"), ("DGS30", "30yr")):
+            if col(c) is not None:
+                res[sid] = col(c)
+        if "DGS10" in res and "DGS2" in res:
+            res["T10Y2Y"] = (res["DGS10"] - res["DGS2"]).dropna()
+        if "DGS10" in res and "DGS3MO" in res:
+            res["T10Y3M"] = (res["DGS10"] - res["DGS3MO"]).dropna()
+    if real:
+        rl = pd.concat(real).sort_index()
+        rl = rl[~rl.index.duplicated(keep="last")]
+        if "10yr" in rl:
+            res["DFII10"] = pd.to_numeric(rl["10yr"], errors="coerce").dropna()
+        if "5yr" in rl and "DGS5" in res:
+            res["T5YIE"] = (res["DGS5"] - pd.to_numeric(rl["5yr"], errors="coerce")).dropna()
+        if "DFII10" in res and "DGS10" in res:
+            res["T10YIE"] = (res["DGS10"] - res["DFII10"]).dropna()
+    return res
+
+
+def fetch_tga():
+    """Treasury General Account closing balance ($mn) from the Daily Treasury Statement."""
+    url = "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/dts/operating_cash_balance"
+    start = (pd.Timestamp.now() - pd.DateOffset(years=HISTORY_YEARS)).strftime("%Y-%m-%d")
+    rows, page = [], 1
+    while page < 20:
+        r = requests.get(url, timeout=40, params={
+            "filter": f"record_date:gte:{start}",
+            "fields": "record_date,account_type,open_today_bal,close_today_bal",
+            "page[size]": 10000, "page[number]": page, "sort": "record_date"})
+        r.raise_for_status()
+        j = r.json()
+        rows += j["data"]
+        if page >= j.get("meta", {}).get("total-pages", 1):
+            break
+        page += 1
+    df = pd.DataFrame(rows)
+    df = df[df["account_type"].str.contains("Treasury General Account", case=False, na=False) &
+            df["account_type"].str.contains("Closing", case=False, na=False)]
+    val = pd.to_numeric(df["open_today_bal"], errors="coerce")
+    if val.isna().all():
+        val = pd.to_numeric(df["close_today_bal"], errors="coerce")
+    return pd.Series(val.values, index=pd.to_datetime(df["record_date"])).dropna()
+
+
+def fetch_rrp():
+    """Overnight reverse repo accepted ($bn) from the NY Fed."""
+    start = (pd.Timestamp.now() - pd.DateOffset(years=HISTORY_YEARS)).strftime("%Y-%m-%d")
+    end = pd.Timestamp.now().strftime("%Y-%m-%d")
+    r = requests.get("https://markets.newyorkfed.org/api/rp/reverserepo/propositions/search.json",
+                     params={"startDate": start, "endDate": end}, headers=UA, timeout=40)
+    r.raise_for_status()
+    ops = r.json()["repo"]["operations"]
+    s = pd.Series({pd.Timestamp(o["operationDate"]): o.get("totalAmtAccepted", 0) / 1e9 for o in ops})
+    return s.groupby(level=0).sum().sort_index()
+
+
+def fetch_mortgage():
+    """Freddie Mac 30-year fixed mortgage rate (weekly)."""
+    r = requests.get("https://www.freddiemac.com/pmms/docs/PMMS_history.csv", headers=UA, timeout=40)
+    r.raise_for_status()
+    df = pd.read_csv(io.StringIO(r.text))
+    df.columns = [c.strip().lower() for c in df.columns]
+    s = pd.Series(pd.to_numeric(df["pmms30"], errors="coerce").values, index=pd.to_datetime(df["date"], format="mixed"))
+    return s.dropna().sort_index()
+
+
+BLS = {"CPI": "CUSR0000SA0", "CORECPI": "CUSR0000SA0L1E", "UNRATE": "LNS14000000", "PAYEMS": "CES0000000001"}
+
+
+def fetch_bls(ids):
+    """Monthly BLS series via the keyless v1 API (10-year window)."""
+    now = pd.Timestamp.now().year
+    r = requests.post("https://api.bls.gov/publicAPI/v1/timeseries/data/", timeout=40,
+                      json={"seriesid": [BLS[i] for i in ids], "startyear": str(now - HISTORY_YEARS), "endyear": str(now)})
+    r.raise_for_status()
+    out = {}
+    code_to_id = {v: k for k, v in BLS.items()}
+    for ser in r.json().get("Results", {}).get("series", []):
+        pts = {pd.Timestamp(int(d["year"]), int(d["period"][1:]), 1): float(d["value"])
+               for d in ser["data"] if d["period"].startswith("M") and d["period"] != "M13" and d["value"] not in ("-", "")}
+        if pts:
+            out[code_to_id[ser["seriesID"]]] = pd.Series(pts).sort_index()
+    return out
 
 
 def fetch_yahoo(tickers):
@@ -240,7 +372,7 @@ def analyze(item, s, spy):
 
 # Composites are all scored in "good for risk assets" direction (+100 best, -100 worst).
 COMPOSITES = [
-    ("liquidity", "Liquidity", ["NETLIQ", "WRESBAL", "NFCI", "M2SL"]),
+    ("liquidity", "Liquidity", ["NETLIQ", "WRESBAL", "NFCI", "M2SL", "RRPONTSYD", "WTREGEN"]),
     ("rates", "Rates", ["DGS10", "DGS2", "DFII10", "MOVE"]),
     ("dollar", "Dollar", ["DXY", "CEW", "AUDJPY"]),
     ("credit", "Credit & vol", ["HYOAS", "CCCOAS", "HYG_IEF", "VIXTS", "VIX"]),
@@ -279,6 +411,29 @@ def main():
             raw[u["id"]] = s
         else:
             print(f"  missing FRED {u['id']}")
+
+    missing_fred = [u["id"] for u in fred_items if u["id"] not in raw]
+    if missing_fred:
+        print(f"FRED unavailable for {len(missing_fred)} series; trying official keyless sources ...")
+        try:
+            for k, v in fetch_treasury_curves().items():
+                if k in missing_fred and len(v):
+                    raw[k] = v
+        except Exception as e:  # noqa: BLE001
+            print(f"  Treasury curves failed: {e}")
+        for sid, fn in (("WTREGEN", fetch_tga), ("RRPONTSYD", fetch_rrp), ("MORTGAGE30US", fetch_mortgage)):
+            if sid in missing_fred:
+                try:
+                    raw[sid] = fn()
+                except Exception as e:  # noqa: BLE001
+                    print(f"  {sid} fallback failed: {e}")
+        want = [i for i in BLS if i in missing_fred]
+        if want:
+            try:
+                raw.update(fetch_bls(want))
+            except Exception as e:  # noqa: BLE001
+                print(f"  BLS failed: {e}")
+        print(f"  still missing: {[i for i in missing_fred if i not in raw]}")
 
     print("Yahoo ...")
     yf_items = [u for u in U if u["src"] == "yf"]

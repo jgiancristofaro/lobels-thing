@@ -29,6 +29,8 @@ jobs:
           python-version: "3.12"
       - run: pip install -r pipeline/requirements.txt
       - run: python -u pipeline/fetch.py
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         timeout-minutes: 15
       - name: Commit refreshed data
         run: |

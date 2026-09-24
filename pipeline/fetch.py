@@ -38,9 +38,9 @@ UA = {"User-Agent": "Mozilla/5.0 (compatible; macro-dashboard/1.0)"}
 # ------------------------------------------------------------------ fetching
 def fetch_fred(code):
     url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={code}"
-    for attempt in range(4):
+    for attempt in range(3):
         try:
-            r = requests.get(url, headers=UA, timeout=60)
+            r = requests.get(url, headers=UA, timeout=25)
             r.raise_for_status()
             df = pd.read_csv(io.StringIO(r.text))
             df.columns = ["date", "v"]
@@ -50,7 +50,7 @@ def fetch_fred(code):
             return s[s.index >= pd.Timestamp.now() - pd.DateOffset(years=HISTORY_YEARS + 1)]
         except Exception as e:  # noqa: BLE001
             print(f"  FRED {code} attempt {attempt + 1} failed: {e}")
-            time.sleep(2 ** attempt)
+            time.sleep(2 + 2 * attempt)
     return None
 
 
@@ -270,13 +270,15 @@ def main():
     raw = {}
 
     print("FRED ...")
-    for u in U:
-        if u["src"] == "fred":
-            s = fetch_fred(u["sym"])
-            if s is not None and len(s):
-                raw[u["id"]] = s
-            else:
-                print(f"  missing FRED {u['id']}")
+    from concurrent.futures import ThreadPoolExecutor
+    fred_items = [u for u in U if u["src"] == "fred"]
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        results = list(ex.map(lambda u: fetch_fred(u["sym"]), fred_items))
+    for u, s in zip(fred_items, results):
+        if s is not None and len(s):
+            raw[u["id"]] = s
+        else:
+            print(f"  missing FRED {u['id']}")
 
     print("Yahoo ...")
     yf_items = [u for u in U if u["src"] == "yf"]

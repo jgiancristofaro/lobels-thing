@@ -1,0 +1,2 @@
+{"asof":"2026-09-24","headline":"Placeholder headline","summary":["Placeholder."],"good":[{"text":"x","ids":["SPX"]}],"bad":[{"text":"y","ids":["DGS10"]}],
+"trades":[{"dir":"LONG","name":"Test","expr":"Buy XLE","ids":["XLE","WTI"],"thesis":"t","trigger":"a","stop":"b","target":"c","horizon":"3m","conviction":2}]}

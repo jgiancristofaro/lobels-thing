@@ -39,8 +39,9 @@ The page opens with:
 1. Create a new **public** GitHub repo (for example `macro-tape`) and push this project to its `main` branch.
 2. In the repo, go to **Settings → Pages → Build and deployment → Source** and pick **GitHub Actions**.
 3. In `.github/workflows/update.yml`, change the `push: branches:` entry to `main`.
-4. Run the workflow once from **Actions → Update dashboard data → Run workflow**.
-5. The site is live at `https://<your-user>.github.io/macro-tape/`. On a phone, use **Add to Home Screen**.
+4. Optional but recommended: get a free FRED API key (fred.stlouisfed.org → My Account → API Keys) and add it as a repo secret named `FRED_API_KEY`. FRED blocks keyless requests from GitHub's servers. The key adds credit spreads, the Fed balance sheet, net liquidity, jobless claims and the other monthly macro series. Rates, TGA, reverse repo, mortgages, CPI and jobs come from keyless Treasury/NY Fed/Freddie Mac/BLS sources either way.
+5. Run the workflow once from **Actions → Update dashboard data → Run workflow**.
+6. The site is live at `https://<your-user>.github.io/macro-tape/`. On a phone, use **Add to Home Screen**.
 
 ## Local preview
 

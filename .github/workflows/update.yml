@@ -1,0 +1,42 @@
+name: Update dashboard data
+
+on:
+  schedule:
+    - cron: "37 22 * * 1-5"   # after the US close, weekdays
+    - cron: "17 11 * * 1-5"   # morning refresh for overnight markets + FRED releases
+  workflow_dispatch:
+  push:
+    branches: [claude/druckenmiller-charts-dashboard-cv3595]
+    paths: ["pipeline/**", ".github/workflows/update.yml"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dashboard-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r pipeline/requirements.txt
+      - run: python pipeline/fetch.py
+      - name: Commit refreshed data
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add site/data.json
+          git diff --cached --quiet || git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        continue-on-error: true   # succeeds once Pages is enabled with source "GitHub Actions"

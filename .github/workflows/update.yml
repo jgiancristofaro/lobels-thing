@@ -33,12 +33,23 @@ jobs:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         timeout-minutes: 15
       - name: Commit refreshed data
+        # site/data.json is fully regenerated every run, so it never needs a real merge: rebasing
+        # or merging it against a concurrent push just produces spurious conflicts. Instead, rebase
+        # our change onto whatever is latest on the branch right before committing, retrying a
+        # couple of times in case something else pushes in the same few seconds.
         run: |
           git config user.name "dashboard-bot"
           git config user.email "dashboard-bot@users.noreply.github.com"
-          git add site/data.json
-          git diff --cached --quiet || git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase --autostash && git push
+          for attempt in 1 2 3; do
+            git fetch origin "${{ github.ref_name }}"
+            git reset "origin/${{ github.ref_name }}"
+            git add site/data.json
+            git diff --cached --quiet && { echo "no data changes"; break; }
+            git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push origin "HEAD:${{ github.ref_name }}" && break
+            echo "push attempt $attempt failed, retrying..."
+            sleep $((attempt * 5))
+          done
       - run: python pipeline/build_site.py
       - uses: actions/upload-pages-artifact@v3
         with:

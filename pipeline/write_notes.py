@@ -24,12 +24,13 @@ SCHEMA = {
     "properties": {
         "headline": {"type": "string", "description": "One sharp sentence: the day's dominant tension for markets."},
         "summary": {
-            "type": "array", "minItems": 2, "maxItems": 4,
+            "type": "array",
             "items": {"type": "string"},
-            "description": "2-4 dense paragraphs. Specific numbers from the data provided, no filler.",
+            "description": "EXACTLY 2 to 4 dense paragraphs. Specific numbers from the data provided, no filler.",
         },
         "good": {
-            "type": "array", "minItems": 3, "maxItems": 6,
+            "type": "array",
+            "description": "EXACTLY 3 to 6 items.",
             "items": {
                 "type": "object",
                 "properties": {
@@ -40,7 +41,8 @@ SCHEMA = {
             },
         },
         "bad": {
-            "type": "array", "minItems": 3, "maxItems": 6,
+            "type": "array",
+            "description": "EXACTLY 3 to 6 items.",
             "items": {
                 "type": "object",
                 "properties": {
@@ -51,7 +53,8 @@ SCHEMA = {
             },
         },
         "trades": {
-            "type": "array", "minItems": 4, "maxItems": 7,
+            "type": "array",
+            "description": "EXACTLY 4 to 7 items.",
             "items": {
                 "type": "object",
                 "properties": {

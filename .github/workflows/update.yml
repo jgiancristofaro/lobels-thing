@@ -32,18 +32,30 @@ jobs:
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         timeout-minutes: 15
+      - name: Regenerate the written read and trade ideas
+        # Only on the scheduled/manual refresh, never on a plain code push - so pushing a
+        # hand-edited site/notes.json deploys it immediately instead of it being overwritten
+        # seconds later by this same workflow run. continue-on-error: a bad/failed LLM call
+        # must never block the data commit or the deploy below; site/notes.json is simply
+        # left as whatever was last committed.
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: python -u pipeline/write_notes.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        timeout-minutes: 10
       - name: Commit refreshed data
-        # site/data.json is fully regenerated every run, so it never needs a real merge: rebasing
-        # or merging it against a concurrent push just produces spurious conflicts. Instead, rebase
-        # our change onto whatever is latest on the branch right before committing, retrying a
-        # couple of times in case something else pushes in the same few seconds.
+        # site/data.json and site/notes.json are fully regenerated every run, so they never need
+        # a real merge: rebasing or merging them against a concurrent push just produces spurious
+        # conflicts. Instead, rebase our change onto whatever is latest on the branch right before
+        # committing, retrying a couple of times in case something else pushes in the same window.
         run: |
           git config user.name "dashboard-bot"
           git config user.email "dashboard-bot@users.noreply.github.com"
           for attempt in 1 2 3; do
             git fetch origin "${{ github.ref_name }}"
             git reset "origin/${{ github.ref_name }}"
-            git add site/data.json
+            git add site/data.json site/notes.json
             git diff --cached --quiet && { echo "no data changes"; break; }
             git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git push origin "HEAD:${{ github.ref_name }}" && break

@@ -31,8 +31,18 @@ The page opens with:
 
 - `pipeline/universe.py` defines the chart list
 - `pipeline/fetch.py` pulls Yahoo Finance + FRED (no API keys), computes signals, and writes `site/data.json`
-- `.github/workflows/update.yml` runs it every weekday after the close and every morning, commits the data, and deploys to GitHub Pages
-- `site/notes.json` holds the written read and trade ideas. Edit it by hand, or ask Claude to refresh it.
+- `pipeline/write_notes.py` hands that data to Claude (with web search for current-events grounding)
+  to regenerate `site/notes.json` — the headline, summary paragraphs, good/bad list and trade ideas —
+  so the written read updates with fresh insight, not just the charts. Requires an `ANTHROPIC_API_KEY`
+  repo secret (see below); without one it's skipped and the last-written `notes.json` stays as-is.
+- `.github/workflows/update.yml` runs the whole pipeline every weekday after the close and every
+  morning (twice a day, U.S. Eastern **6:37 PM** and **7:17 AM** — the crons in that file are UTC),
+  commits both files, and deploys to GitHub Pages.
+- The notes step only fires on the scheduled runs or a manual **Run workflow** — never on a plain
+  code push — so pushing a hand-edited `site/notes.json` (or asking Claude to update it interactively)
+  publishes immediately instead of being overwritten seconds later by the same push's own workflow
+  run. It *will* get overwritten at the next scheduled refresh, twice a day, like everything else in
+  that file.
 
 ## Getting the public URL (GitHub Pages)
 
@@ -48,6 +58,13 @@ and add it as a repo secret named `FRED_API_KEY` (**Settings → Secrets and var
 FRED blocks keyless requests from GitHub's servers. The key adds credit spreads, the Fed balance
 sheet, net liquidity, jobless claims and the other monthly macro series. Rates, TGA, reverse repo,
 mortgages, CPI and jobs come from keyless Treasury/NY Fed/Freddie Mac/BLS sources either way.
+
+To get the written read and trade ideas regenerating automatically, add an
+**`ANTHROPIC_API_KEY`** repo secret the same way (console.anthropic.com → API Keys). Each scheduled
+run makes one Claude API call (`claude-opus-5`, with web search for the day's headlines) — at
+current per-token pricing that's roughly a few cents a run, on the order of $5–10/month for the
+twice-daily schedule. Without this key the charts still refresh; only the top-of-page prose stays
+frozen at whatever it last was.
 
 ## Local preview
 

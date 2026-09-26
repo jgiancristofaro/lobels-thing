@@ -226,9 +226,12 @@ def main():
     )
 
     try:
-        response = client.with_options(timeout=300.0).messages.create(
+        response = client.with_options(timeout=480.0).messages.create(
             model=MODEL,
-            max_tokens=8000,
+            # Adaptive thinking + web search both spend from this same budget before the final
+            # JSON text is written, so 8000 was too tight - it truncated the response mid-string
+            # more often than not (silent under continue-on-error until someone checked the logs).
+            max_tokens=20000,
             system=SYSTEM,
             thinking={"type": "adaptive"},
             output_config={"effort": "high", "format": {"type": "json_schema", "schema": SCHEMA}},
@@ -241,6 +244,10 @@ def main():
 
     if response.stop_reason == "refusal":
         print(f"Claude declined the request: {response.stop_details}", file=sys.stderr)
+        return 1
+    if response.stop_reason == "max_tokens":
+        print(f"Hit max_tokens ({response.usage.output_tokens} output tokens) before finishing - "
+              "the response was truncated. Raise max_tokens further.", file=sys.stderr)
         return 1
 
     text_blocks = [b.text for b in response.content if b.type == "text"]

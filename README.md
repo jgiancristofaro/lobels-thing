@@ -35,9 +35,13 @@ The page opens with:
   to regenerate `site/notes.json` — the headline, summary paragraphs, good/bad list and trade ideas —
   so the written read updates with fresh insight, not just the charts. Requires an `ANTHROPIC_API_KEY`
   repo secret (see below); without one it's skipped and the last-written `notes.json` stays as-is.
-- `.github/workflows/update.yml` runs the whole pipeline every weekday after the close and every
-  morning (twice a day, U.S. Eastern **6:37 PM** and **7:17 AM** — the crons in that file are UTC),
-  commits both files, and deploys to GitHub Pages.
+- `.github/workflows/update.yml` runs the whole pipeline every weekday, twice a day, targeting
+  U.S. Eastern **7:15 AM** and **6:37 PM** (after the close), commits both files, and deploys to
+  GitHub Pages. GitHub starts scheduled runs hours late (observed ~5.5h for the morning slot, ~3h for
+  the evening one), so each cron fires *early* (05:15 and 19:03 UTC) and the workflow's first step
+  sleeps until the real target time (11:15 and 22:37 UTC). If GitHub is later than the target anyway,
+  it runs immediately. Scheduled runs have their own concurrency group so a push can't cancel a
+  sleeping run. If you change a cron string, change the matching entry in the wait step too.
 - The notes step only fires on the scheduled runs or a manual **Run workflow** — never on a plain
   code push — so pushing a hand-edited `site/notes.json` (or asking Claude to update it interactively)
   publishes immediately instead of being overwritten seconds later by the same push's own workflow
@@ -61,8 +65,8 @@ mortgages, CPI and jobs come from keyless Treasury/NY Fed/Freddie Mac/BLS source
 
 To get the written read and trade ideas regenerating automatically, add an
 **`ANTHROPIC_API_KEY`** repo secret the same way (console.anthropic.com → API Keys). Each scheduled
-run makes one Claude API call (`claude-opus-5`, with web search for the day's headlines) — at
-current per-token pricing that's roughly a few cents a run, on the order of $5–10/month for the
+run makes one Claude API call (`claude-opus-5`, with web search for the day's headlines). Measured
+usage is about 36k input and 13.5k output tokens, roughly $0.50 a run, so around $20–25/month for the
 twice-daily schedule. Without this key the charts still refresh; only the top-of-page prose stays
 frozen at whatever it last was.
 

@@ -1,9 +1,15 @@
 name: Update dashboard data
 
 on:
+  # GitHub starts scheduled runs hours late (observed: ~5.5h for the morning slot, ~3h for the
+  # evening one), so each cron deliberately fires EARLY and the first step below sleeps until the
+  # real target time. If GitHub is later than the target anyway, the wait is skipped.
+  #   "15 5 * * 1-5"  -> waits until 11:15 UTC (7:15 AM ET): morning refresh
+  #   "3 19 * * 1-5"  -> waits until 22:37 UTC (6:37 PM ET): after the US close
+  # If you change a cron string, change the matching entry in the wait step too.
   schedule:
-    - cron: "37 22 * * 1-5"   # after the US close, weekdays
-    - cron: "17 11 * * 1-5"   # morning refresh for overnight markets + FRED releases
+    - cron: "15 5 * * 1-5"
+    - cron: "3 19 * * 1-5"
   workflow_dispatch:
   push:
     branches: [main]
@@ -14,15 +20,46 @@ permissions:
   pages: write
   id-token: write
 
+# One group per trigger type. A push cancels an older push run, but must never cancel a scheduled
+# run that is sleeping until its target time (that would silently drop the day's refresh), and a
+# long sleep must not block push deploys either.
 concurrency:
-  group: dashboard-data-v2
-  cancel-in-progress: true
+  group: dashboard-${{ github.event_name }}
+  cancel-in-progress: ${{ github.event_name == 'push' }}
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # GitHub-hosted jobs are capped at 6h. Worst case here: 5h wait + ~10 min of work.
+    timeout-minutes: 345
     steps:
+      # First step, BEFORE checkout, so everything after the wait runs on the code that is on
+      # main at the target time rather than a checkout that is hours stale.
+      - name: Wait until the target refresh time
+        if: github.event_name == 'schedule'
+        timeout-minutes: 310
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          case "$SCHEDULE" in
+            "15 5 * * 1-5") TARGET="11:15" ;;
+            "3 19 * * 1-5") TARGET="22:37" ;;
+            *) echo "No target time configured for '$SCHEDULE'; not waiting."; exit 0 ;;
+          esac
+          MAX_WAIT=18000   # 5h: never sleep longer than this
+          now=$(date -u +%s)
+          target=$(date -u -d "$(date -u +%F) $TARGET:00" +%s)
+          remaining=$((target - now))
+          echo "Started $(date -u +%H:%M:%S) UTC; target $TARGET UTC; ${remaining}s to go."
+          if [ "$remaining" -le 0 ]; then
+            echo "Target time already passed (GitHub started this run late); running now."
+          elif [ "$remaining" -gt 23400 ]; then
+            echo "Target is more than 6.5h away, so this is a stale run for a different day; running now."
+          else
+            wait=$(( remaining < MAX_WAIT ? remaining : MAX_WAIT ))
+            echo "Sleeping ${wait}s until $(date -u -d "@$((now + wait))" +%H:%M:%S) UTC."
+            sleep "$wait"
+          fi
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:

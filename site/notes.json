@@ -1,14 +1,107 @@
 {
-  "headline": "The dollar cracked and the vol bid vanished — silver +4.9%, gold +2.8%, VIX -11.7% — while crude kept sliding and energy equities still haven't been told.",
+  "headline": "The AI complex is now the funding source: a +1.6% S&P and a +3.0% Dow built entirely on liquidating power, chips and energy into consumers, housing and gold miners.",
   "summary": [
-    "Yesterday the story was a rates shock reshuffling US equity internals. Today it's an FX and volatility story, and it's global. DXY -0.6% to 101.29, EURUSD +0.7% to 1.1273, GBPUSD +0.7% to 1.3501 (+2.0% on the month, z=0.89, turning up with acceleration 1.36), USDCHF -0.4%, USDCAD -0.4% and -2.3% on the month at z=-1.43 with acceleration -2.18. VIX collapsed 11.7% to 18.39 against a VIX3M of 21.27 — that implies a term structure near 0.86 versus the 0.979 print at z=1.72 that defined the last two weeks. SKEW is off to 150.01. The credit & vol composite improved to -31 from -35, HYG/IEF +0.5% and turning up off z=-1.64, BKLN at the 97th percentile of its year. Risk regime is unchanged at -14, but the internals under it are not the same tape.",
-    "The washed-out hard-asset complex reversed violently. Silver +4.9% to 52.00 after a -14.6% month (z=-1.65) that left it 26.1% below its 200-day at the 7th percentile. Gold +2.8% to 4051, still 10.2% below its 200-day at the 11th percentile. Platinum +2.5% off the 2.5th percentile. Gold/silver -2.0% to 77.90, finally breaking a z=2.09 extension with acceleration 1.40. Copper +1.0% to 6.4405. This is the mirror image of the deflation-in-metals trade that has run since September, and it is a weak-dollar trade, not an inflation trade — 5y breakevens are flat at 2.39, 10y breakevens 2.30 and rolling over. Critically, the miners are still marked at Tuesday's close: GDX -2.0%, GDXJ -2.1%, NEM -1.5%, with GDX/gold at z=-1.08 and GDX 14.2% below its 200-day. The metal moved; the equity has not.",
-    "What is still wrong is energy and EM. Brent -1.2% to 102.31 and -11.3% on the week; WTI -1.2% to 94.96; RBOB -2.7% and -12.0% on the month at z=-1.19. Yet XLE sits 14.3% above its 200-day at the 88th percentile with +16.9% three-month relative strength, XOP 12.5% above its 200-day, XOM +15.3% and CVX +17.4% above theirs. That gap was unfinished business yesterday and it widened again today. On EM: the dollar fell 0.6% and USDBRL still rose 0.5% to 5.4623 (+4.6% on the month, z=1.33), USDMXN +0.5% to 18.661 (z=1.02), CEW -0.5%. When a currency can't rally on a broad dollar down day, that's local stress, not dollar beta — EWZ is -16.9% on the month, 14.3% below its 200-day, BVSP at z=-2.80.",
-    "Rates remain the binding constraint and the US equity dispersion remains historic. 10-year 4.95% (+4bp), 30-year 5.32% (+4bp), 10-year real yield 2.65%, 30-year mortgage 7.24% and +21bp on the month at the 89th percentile; the rates composite is -33. The month's 33bp rally in 10s carries acceleration z=-2.29 — stretched, not trending. Meanwhile QQQ/SPY is at z=-2.72, SMH/SPY z=-2.70, MTUM -13.8% on the month at z=-2.61, high-beta/low-vol -18.5% at z=-2.92, growth/value z=-2.58, against RSP/SPY at z=+3.34 with acceleration +3.76. Asia's semi complex is the epicenter: KOSPI -18.8% on the month (z=-2.59), TAIEX -13.6% (z=-2.64), SOXX -21.0%, AMD -23.7%, MU -20.4%, ASML -16.8%. Europe is the clean side of the world — DAX +1.5% to 26248 and at the 92nd percentile, FTSE +1.6% at the 93rd, CAC +1.6%, Euro Stoxx +1.7%, Hang Seng +1.7%, Shanghai +2.2% — while the Nikkei fell 1.4% with USDJPY at 158.23. A weak yen no longer buys you Japan."
+    "Yesterday was a dollar-and-vol story. Today it is a forced factor unwind dressed up as a rally. SPX +1.6% to 7688.6, DJI +3.0%, equal-weight RSP +1.9% — but NDX only +0.9% and QQQ/SPY fell another 0.7% to z=-3.03 with acceleration z=-3.27. Under the index: XLY +4.3%, XLF +3.5%, XLP +3.4%, XLRE +3.3%, XLV +3.1%, versus XLE -4.7% and XLK flat. ITB +7.2%, XHB +5.4%, XRT +5.5%, JETS +6.7%, IHI +6.7%, HD +6.5% (z=3.70, acc 3.96), MCD +6.5% (z=3.98), DHI +8.1%, WMT +22.9% on the month. RSP/SPY sits at z=+3.45 with acceleration +3.67; high-beta/low-vol is -20.9% on the month at z=-3.26 and growth/value is at the 0th percentile of its 52-week range. This is the widest, most violent rotation in the dataset, and it is happening on an up day for the index — which is why it has gone largely unpunished so far.",
+    "The epicenter moved. Last week it was semis; today it is everything that monetizes AI capex downstream. VST -13.8% (21.2% below its 200-day, 0th percentile of the year), ETN -9.9% (-18.4% on the month, z=-2.64), GEV -9.3%, CEG -6.7%, GRID -3.1% and -10.9% on the month at z=-2.04, NLR at the 0th percentile. Chips kept bleeding into it: SOXX -3.1% and -23.6% on the month at z=-2.62, SMH/SPY z=-3.23, MU -7.0% (-25.2% on the month), ASML -3.6%, NVDA -3.2%. Asia took the clearing price — KOSPI -5.3% in a session that required a program-trading sidecar halt, and -22.4% on the month at z=-3.04 and 18.0% below its 200-day; TAIEX -3.2%, Nikkei -1.8%. Meanwhile the non-chip mega-caps were the bid: MSFT +6.7% (52-week high, 26.9% above its 200-day), AAPL +5.3%, AMZN +6.1%, GOOGL +3.2% off a -16.6% month. Software over semis is now a trend, not a wobble: IGV/SMH +3.7% today, +18.6% on the month, z=2.64 and turning up.",
+    "Two of yesterday's open gaps closed in a single session. The gold miners finally caught the metal: GDX +9.0%, GDXJ +9.6%, NEM +9.9% against gold +1.5% to 4132.9, with GDX/gold +5.1% and turning up. And energy equity finally capitulated to crude — XLE -4.7%, XOP -6.4%, OIH -4.9%, XOM -4.6%, CVX -3.7% on a day WTI rose 1.3% to 89.29 and Brent 2.2%. That is the gap trade paying off, not a new entry; XLE is still 8.8% above its 200-day. The rates backdrop remains the quiet support: 10-year -5bp to 4.90 and -41bp on the month, 5-year -37bp, 30-year 5.28%, 10-year real yield 2.64%, and MOVE -6.1% to 93.88, now -17.4% on the month. Credit held: HYG +0.7%, LQD +0.8%, BKLN at the 100th percentile of its year, credit & vol composite at +12 versus -31 yesterday. Risk regime improved to -5 from -14.",
+    "What should worry you is the price of insurance against all this. VIX is 16.93 at the 19.7th percentile of the year, VIX3M fell 11.6%, term structure 0.88 — index vol is priced for calm while single-stock dispersion is at historic extremes and SKEW is 150.9 and turning up with acceleration 1.03. The duration rally is also stretched, not trending: TLT is +6.0% on the month at z=1.64 with acceleration 2.12 yet still 2.1% below its 200-day; 3m10y has collapsed 40bp on the month to 0.69 because bills won't move (3m 4.21, unchanged); 10-year breakevens are 2.26 at the 25th percentile while the CPI index is up 106bp year-to-date and the 30-year mortgage is stuck at 7.24%. And LatAm is still broken independent of the dollar: USDBRL +9.0% on the month at z=2.61, EWZ -25.0% at z=-3.32, Bovespa z=-3.77 with acceleration -4.05, EEM/SPY z=-2.30."
   ],
   "good": [
     {
-      "text": "Volatility event risk cleared: VIX -11.7% to 18.39 against VIX3M at 21.27, implying the inverted term structure (0.979, z=1.72) has snapped back into contango. SKEW -1.8% to 150.01.",
+      "text": "Bond volatility is gone: MOVE -6.1% to 93.88, -17.4% on the month, while 10s fell 5bp to 4.90 and are -41bp on the month and 5s -37bp. The rates composite improved to -28 from -33 and credit & vol flipped to +12 from -31.",
+      "ids": [
+        "MOVE",
+        "DGS10",
+        "DGS5",
+        "DGS30"
+      ]
+    },
+    {
+      "text": "Breadth is the best in the dataset's history: RSP/SPY z=+3.45 with acceleration +3.67, equal-weight S&P +5.8% on the month at the 100th percentile, Dow +3.0% on the day, RUT +1.6% and turning up.",
+      "ids": [
+        "RSP_SPY",
+        "SPW",
+        "DJI",
+        "RUT"
+      ]
+    },
+    {
+      "text": "Credit refuses to crack through an equity-internals bloodbath: HYG +0.7%, LQD +0.8%, BKLN at the 100th percentile of its 52-week range, HYG/IEF turning up off z=-1.69.",
+      "ids": [
+        "HYG",
+        "LQD",
+        "BKLN",
+        "HYG_IEF"
+      ]
+    },
+    {
+      "text": "The rate-sensitive consumer is being bought aggressively: ITB +7.2% (+17.2% on the month), XHB +5.4%, XRT +5.5% (+13.0%), HD +6.5% at z=3.70, MCD +6.5% at z=3.98, DHI +8.1%. XHB/SPY z=2.38, XRT/SPY z=2.85.",
+      "ids": [
+        "ITB",
+        "XHB",
+        "XRT",
+        "HD",
+        "MCD",
+        "DHI"
+      ]
+    },
+    {
+      "text": "Gold miners finally closed the discount to the metal — GDX +9.0%, GDXJ +9.6%, NEM +9.9% versus gold +1.5% — with GDX/gold +5.1% and turning up. Yesterday's stranded equity is no longer stranded.",
+      "ids": [
+        "GDX",
+        "GDXJ",
+        "NEM",
+        "GDX_GOLD",
+        "GOLD"
+      ]
+    },
+    {
+      "text": "Europe and the China/India complex are the clean side of the world: DAX +4.6% on the month at the 100th percentile, FTSE at the 100th, HSI +3.7% and KWEB +4.5% on the day, Sensex +2.6% (+8.5% on the month, z=2.00), INDA +2.7%.",
+      "ids": [
+        "GDAXI",
+        "FTSE",
+        "HSI",
+        "KWEB",
+        "BSESN",
+        "INDA"
+      ]
+    }
+  ],
+  "bad": [
+    {
+      "text": "The AI-power and electrification trade is being liquidated at speed, and the acceleration is bearish: VST -13.8% and 21.2% below its 200-day at the 0th percentile, ETN -9.9% (z=-2.64), GEV -9.3%, CEG -6.7%, GRID -10.9% on the month at z=-2.04, NLR at the 0th percentile.",
+      "ids": [
+        "VST",
+        "ETN",
+        "GEV",
+        "CEG",
+        "GRID",
+        "NLR"
+      ]
+    },
+    {
+      "text": "Asian semis are in a disorderly unwind: KOSPI -5.3% in one session (sidecar halt) and -22.4% on the month at z=-3.04, TAIEX -3.2% at z=-3.13, SOXX -23.6% on the month, MU -7.0%, ASML -3.6%, TSM -2.2%, SMH/SPY z=-3.23.",
+      "ids": [
+        "KS11",
+        "TWII",
+        "SOXX",
+        "MU",
+        "ASML",
+        "TSM",
+        "SMH_SPY"
+      ]
+    },
+    {
+      "text": "Momentum and growth are being destroyed, not rotated: MTUM -15.6% on the month at z=-2.91, high-beta/low-vol -20.9% at z=-3.26, growth/value at the 0th percentile of its 52-week range, QQQ/SPY z=-3.03 with acceleration -3.27.",
+      "ids": [
+        "MTUM",
+        "SPHB_SPLV",
+        "IWF_IWD",
+        "QQQ_SPY"
+      ]
+    },
+    {
+      "text": "Index vol is mispriced against this dispersion: VIX 16.93 at the 19.7th percentile, VIX3M -11.6%, term structure 0.88, but SKEW 150.9 turning up with acceleration 1.03. Protection is cheap because nobody needs it on an up day.",
       "ids": [
         "VIX",
         "VIX3M",
@@ -17,277 +110,155 @@
       ]
     },
     {
-      "text": "Dollar broke lower across G10: DXY -0.6% to 101.29, EURUSD +0.7%, GBPUSD +0.7% (+2.0% on the month, z=0.89, acceleration 1.36), USDCAD -2.3% on the month at z=-1.43.",
+      "text": "Energy equity capitulated into a rising crude tape — XLE -4.7%, XOP -6.4%, OIH -4.9%, XOM -4.6%, CVX -3.7% while WTI rose 1.3% and Brent 2.2%. The gap closed violently; XLE is still 8.8% above its 200-day, so it isn't finished.",
       "ids": [
-        "DXY",
-        "GBPUSD",
-        "EURUSD",
-        "USDCAD",
-        "USDCHF"
-      ]
-    },
-    {
-      "text": "The left-for-dead metals ripped: silver +4.9% from the 7th percentile, gold +2.8%, platinum +2.5% from the 2.5th percentile, copper +1.0%, and gold/silver -2.0% off a z=2.09 extreme.",
-      "ids": [
-        "SILVER",
-        "GOLD",
-        "PLATINUM",
-        "AU_AG",
-        "COPPER"
-      ]
-    },
-    {
-      "text": "Europe and China led global equities: Euro Stoxx +1.7%, DAX +1.5% at the 92nd percentile with +6.8% one-month relative strength, FTSE +1.6% at the 93rd, CAC +1.6%, Hang Seng +1.7%, Shanghai +2.2%.",
-      "ids": [
-        "STOXX50E",
-        "GDAXI",
-        "FTSE",
-        "FCHI",
-        "HSI",
-        "000001SS"
-      ]
-    },
-    {
-      "text": "Credit refuses to confirm the equity stress: HYG/IEF +0.5% and turning up off z=-1.64, BKLN at the 97th percentile of its 52-week range, credit & vol composite improving to -31 from -35.",
-      "ids": [
-        "HYG_IEF",
-        "BKLN",
-        "HYG",
-        "LQD"
-      ]
-    },
-    {
-      "text": "Defensive and domestic cash-flow leadership is still intact and accelerating: XLV +10.7% on the month (z=2.55), LLY +23.3%, LMT +26.4% at z=3.41, XLF +6.9% with acceleration 1.84 and +9.1% relative strength.",
-      "ids": [
-        "XLV",
-        "LLY",
-        "LMT",
-        "XLF",
-        "UNH",
-        "KIE"
-      ]
-    }
-  ],
-  "bad": [
-    {
-      "text": "Crude keeps falling and energy equities haven't marked it: Brent -1.2% to 102.31 and -11.3% on the week, WTI -1.2%, gasoline -12.0% on the month, yet XLE sits 14.3% above its 200-day at the 88th percentile and XOP 12.5% above its.",
-      "ids": [
-        "BRENT",
-        "WTI",
-        "GASOLINE",
         "XLE",
         "XOP",
-        "OIH"
+        "OIH",
+        "XOM",
+        "CVX",
+        "WTI"
       ]
     },
     {
-      "text": "EM currencies did not participate in dollar weakness — USDBRL +0.5% to 5.4623 (+4.6% on the month, z=1.33) and USDMXN +0.5% on a day DXY fell 0.6%; CEW -0.5%. Brazil is a local credit story, not a dollar story.",
+      "text": "Brazil is a local credit event, not dollar beta: USDBRL +9.0% on the month at z=2.61 even with DXY flat, EWZ -25.0% at z=-3.32, Bovespa acceleration z=-4.05. EM/US is z=-2.30 and rolling over.",
       "ids": [
         "USDBRL",
-        "USDMXN",
-        "CEW",
         "EWZ",
-        "BVSP"
-      ]
-    },
-    {
-      "text": "The rates composite is -33 and nothing improved: 10-year 4.95% (+4bp), 30-year 5.32% (+4bp), 10-year real yield 2.65%, 30-year mortgage 7.24% and +21bp on the month at the 89th percentile. The month's bond rally carries acceleration z=-2.29 — exhaustion, not trend.",
-      "ids": [
-        "DGS10",
-        "DGS30",
-        "DFII10",
-        "MORTGAGE30US",
-        "TLT",
-        "MOVE"
-      ]
-    },
-    {
-      "text": "The AI/semis unwind is still accelerating in Asia, not stabilizing: KOSPI -18.8% on the month at z=-2.59 with acceleration -2.44, TAIEX -13.6% at z=-2.64 and -0.8% today, Nikkei -1.4% at z=-2.38, EWT -15.5% on the month.",
-      "ids": [
-        "KS11",
-        "TWII",
-        "N225",
-        "EWT",
-        "EWY",
-        "SOXX"
-      ]
-    },
-    {
-      "text": "Factor dispersion remains at historic extremes: high-beta/low-vol -18.5% on the month at z=-2.92 with acceleration -3.28, MTUM -13.8% at z=-2.61, growth/value z=-2.58, QQQ/SPY z=-2.72 — against RSP/SPY at z=+3.34. A faster unwind, not a healing one.",
-      "ids": [
-        "SPHB_SPLV",
-        "MTUM",
-        "IWF_IWD",
-        "QQQ_SPY",
-        "RSP_SPY",
-        "SMH_SPY"
-      ]
-    },
-    {
-      "text": "The industrial/commodity-equity chain is still broken despite the metal bounce: COPX -16.5% on the month, REMX -21.3% at the 0th percentile, XME -8.5%, NLR -12.4%, CAT -26.0% on the month at z=-3.03 and 22.6% below its 200-day.",
-      "ids": [
-        "COPX",
-        "REMX",
-        "XME",
-        "NLR",
-        "CAT",
-        "FCX"
+        "BVSP",
+        "EEM_SPY"
       ]
     }
   ],
   "trades": [
     {
-      "dir": "LONG",
-      "name": "Gold miners catch-up to the metal",
-      "line": "Long GDX/GDXJ — metal gapped +2.8%, miners still marked -2.0%",
+      "dir": "SHORT",
+      "name": "Short the AI power/electrification complex",
+      "line": "Short VST/GEV/ETN basket: AI capex derivative is breaking",
+      "conviction": 3,
+      "expr": "Equal-weight short VST, GEV, ETN, CEG (25% each); or buy Jan put spreads 10-15% OTM in VST and GEV. Hedge 30% of notional with long XLU to isolate the AI-capex component.",
+      "thesis": "The chips cracked first; the downstream monetizers of AI capex are now repricing with a lag and from far higher relative valuations. These are crowded 2025-26 momentum vehicles with no index-level support, and the rotation out of AI is feeding them to the bid in consumer and healthcare.",
+      "trigger": "VST -13.8% in a session to 21.2% below its 200-day at the 0th percentile of the year; ETN -9.9% and -18.4% on the month at z=-2.64 with acceleration -2.04; GEV -9.3%; CEG -6.7%; GRID -10.9% on the month at z=-2.04, rolling over; NLR -14.9% on the month, 0th percentile.",
+      "stop": "GRID reclaims its 200-day (currently -8.9%) or SMH/SPY turns up off z=-3.23 with NVDA back above its 200-day — that means the capex scare is over and these snap hardest.",
+      "target": "Another 15-20% in the basket; VST toward 100, GRID toward 145.",
+      "horizon": "1-3 months",
+      "ids": [
+        "VST",
+        "GEV",
+        "ETN",
+        "CEG",
+        "GRID",
+        "NLR",
+        "NVDA",
+        "SMH_SPY"
+      ]
+    },
+    {
+      "dir": "PAIR",
+      "name": "Long software vs short semis",
+      "line": "Long IGV / short SMH: ratio breaking out, still 40th pctile",
       "conviction": 2,
-      "expr": "Buy GDX outright; add GDXJ for beta. Size GDXJ at half the GDX notional. Alternative: Dec/Jan GDX 80 calls.",
-      "thesis": "The miners are priced off Tuesday's gold at 3938. Gold printed 4051 and silver 52.00 on Wednesday. GDX/gold is at z=-1.08, GDX is 14.2% below its 200-day at the 20th percentile and GDXJ 19.5% below at the 14th — a washed-out operating-leverage asset against a metal that just reversed on a broad dollar break.",
-      "trigger": "Gold +2.8%, silver +4.9%, platinum +2.5% on 11/4 while GDX -2.0% and GDXJ -2.1% on the 11/3 close. Gold/silver -2.0% off a z=2.09 extension with acceleration 1.40 — the ratio blow-off that marked the metals low is unwinding. DXY -0.6% to 101.29 with acceleration z=-1.51.",
-      "stop": "Gold back below 3900 or GDX/gold makes a new low beneath the current 0.216. A DXY close back above 102.3 kills the thesis.",
-      "target": "GDX back to its 200-day, roughly +14% from 77.60; GDXJ +20%.",
+      "expr": "Dollar-neutral long IGV vs short SMH, 1:1 notional. Add a small long IGV call overlay for convexity.",
+      "thesis": "Software monetizes AI without carrying the capital intensity; semis carry the balance sheet. The ratio collapsed 35.5% over a year and is only now mean-reverting — it is up 18.6% on the month and still sits at the 40th percentile of its 52-week range, so there is runway without needing a new narrative.",
+      "trigger": "IGV/SMH +3.7% today, +18.6% on the month at z=2.64 with acceleration 2.26, turning up. SOXX -23.6% on the month at z=-2.62; SMH -20.4%; IGV holds 10.1% above its 200-day with a turning-up relative-strength state.",
+      "stop": "Ratio back below 0.190 (-7.5% from 0.2054), or MU and TSM both reclaim their 200-day.",
+      "target": "Ratio 0.235, roughly +14% on the pair.",
+      "horizon": "1-2 months",
+      "ids": [
+        "IGV",
+        "SMH",
+        "IGV_SMH",
+        "SOXX",
+        "MU",
+        "TSM"
+      ]
+    },
+    {
+      "dir": "LONG",
+      "name": "Buy index downside while it's cheap",
+      "line": "Dec SPX put spreads / VIX call spreads with VIX at 16.9",
+      "conviction": 2,
+      "expr": "Buy Dec SPX 5% OTM / 12% OTM put spreads, roughly 1.5% of NAV premium; or VIX Dec 20/30 call spreads. Sell a 3% OTM Dec call against it if you need to cheapen carry.",
+      "thesis": "The index is masking a violent internal liquidation. Realized dispersion like this — high-beta/low-vol -20.9% in a month, momentum -15.6%, Korea -22.4% — historically resolves through an index-level air pocket when the long leg (consumer, staples, healthcare) finally gets taken as the source of funds.",
+      "trigger": "VIX 16.93 at the 19.7th percentile of its 52-week range and VIX3M down 11.6% to 18.80 (11.6th percentile) on the same day SKEW rose to 150.9 and turned up with acceleration 1.03. Tail demand is rising while at-the-money vol is being sold.",
+      "stop": "VIX3M sustained below 17 with SKEW back under 145 and RSP/SPY acceleration fading — that is an orderly broadening, not a liquidation.",
+      "target": "VIX 24+; 2.5-3x on the put spread.",
+      "horizon": "4-6 weeks",
+      "ids": [
+        "VIX",
+        "VIX3M",
+        "VIXTS",
+        "SKEW",
+        "SPX",
+        "SPHB_SPLV",
+        "MTUM"
+      ]
+    },
+    {
+      "dir": "PAIR",
+      "name": "Long Germany/UK vs short Korea",
+      "line": "Long EWG+EWU / short EWY: capex beta vs domestic earnings",
+      "conviction": 2,
+      "expr": "Long 50% EWG + 50% EWU vs short EWY, equal notional, FX unhedged.",
+      "thesis": "Korea is the purest listed proxy for AI memory capex and is unwinding with circuit breakers; Germany and the UK are domestic-earnings markets making 52-week highs with falling global yields and a soft dollar. The pair is long the rotation's destination and short its source.",
+      "trigger": "KOSPI -5.3% in a session, -22.4% on the month at z=-3.04 and 18.0% below its 200-day; EWY -20.5% on the month. Against that, DAX +4.6% on the month at the 100th percentile, FTSE at the 100th, EWG +3.4% and EWU +3.4% today, EFA/SPY +2.7% on the month with acceleration 1.99.",
+      "stop": "Pair drawdown of 6%, or EWY reclaiming its 200-day (currently -6.7% away).",
+      "target": "+12% on the pair.",
+      "horizon": "2-3 months",
+      "ids": [
+        "EWG",
+        "EWU",
+        "EWY",
+        "GDAXI",
+        "FTSE",
+        "KS11",
+        "EFA_SPY"
+      ]
+    },
+    {
+      "dir": "PAIR",
+      "name": "Long gold miners vs the metal",
+      "line": "Long GDX / short GLD: the equity discount is finally closing",
+      "conviction": 2,
+      "expr": "Long GDX (add 25% GDXJ and a GDX Jan 90 call overlay) vs short GLD at ~0.6x notional to neutralize bullion beta.",
+      "thesis": "Miners spent the entire gold drawdown trading worse than the metal; that discount is now unwinding with the metal stabilizing. Operating leverage works in both directions and the ratio has barely started.",
+      "trigger": "GDX +9.0%, GDXJ +9.6%, NEM +9.9% against gold +1.5% to 4132.9; GDX/gold +5.1% on the day and turning up with acceleration 0.46. GDX is still 6.4% below its 200-day at the 35th percentile while the ratio sits at the 66th — the equity has room the metal does not.",
+      "stop": "GDX/gold back below 0.215 (-5%), or gold losing 4000 with silver failing to hold 50.",
+      "target": "GDX/gold to 0.245 (+8%); GDX toward 95.",
       "horizon": "4-8 weeks",
       "ids": [
         "GDX",
         "GDXJ",
-        "GOLD",
-        "SILVER",
         "GDX_GOLD",
-        "AU_AG",
+        "GOLD",
+        "GLD",
         "NEM",
-        "DXY"
-      ]
-    },
-    {
-      "dir": "PAIR",
-      "name": "Short energy equities vs long S&P",
-      "line": "Short XLE/XOP vs long SPY — crude -11% on the week, XLE +14% over 200d",
-      "conviction": 3,
-      "expr": "Short XLE and XOP in equal notional (60/40) against a long SPY leg of the same gross. Or buy XLE Jan puts at the money.",
-      "thesis": "Energy equities are discounting Brent in the 110s. Brent is 102.31 and falling, gasoline cracks are collapsing. XLE at +14.3% over its 200-day with +16.9% three-month relative strength is the single widest fundamental/price gap in the digest.",
-      "trigger": "Brent -1.2% today and -11.3% on the week; WTI -1.2% to 94.96; RBOB -2.7% today, -10.0% on the week and -12.0% on the month at z=-1.19 with the trend rolling over. OIH already rolling over (-5.8% on the week) while XLE is only -2.2% — the services complex is cracking first, as it always does.",
-      "stop": "Brent reclaims 110 or WTI closes above 100 on an actual supply event. Also exit if XLE/SPY breaks out to new 52-week relative highs.",
-      "target": "XLE back to its 200-day, roughly -12%; the pair worth 10-14 points of relative performance.",
-      "horizon": "6-10 weeks",
-      "ids": [
-        "XLE",
-        "XOP",
-        "OIH",
-        "BRENT",
-        "WTI",
-        "GASOLINE",
-        "XOM",
-        "CVX",
-        "SPY"
-      ]
-    },
-    {
-      "dir": "LONG",
-      "name": "Long sterling against the dollar",
-      "line": "Long GBPUSD 1.3501 — best momentum in G10, DXY accelerating lower",
-      "conviction": 2,
-      "expr": "Long GBPUSD spot or Dec futures. Fund partly by shorting USDCAD if you want a pure dollar-short expression rather than a cable call.",
-      "thesis": "Sterling is the only G10 currency with a clean turn: +2.0% on the month, z=0.89, trend turning up with acceleration 1.36, 0.5% above its 200-day at the 60th percentile. The euro is still structurally offered (16th percentile, down trend), so cable is the cleaner long dollar-short.",
-      "trigger": "GBP +0.7% today and +1.5% on the week while DXY -0.6% with acceleration z=-1.51 and the dollar composite at -31. USDCAD -2.3% on the month at z=-1.43 with acceleration -2.18 confirms this is a dollar move, not a sterling idiosyncrasy. UK equities corroborate: FTSE +1.6% at the 93rd percentile.",
-      "stop": "1.3350 — below that the turn failed. Or DXY back above 102.5.",
-      "target": "1.3850.",
-      "horizon": "1-3 months",
-      "ids": [
-        "GBPUSD",
-        "DXY",
-        "USDCAD",
-        "EURUSD",
-        "FTSE",
-        "EWU"
-      ]
-    },
-    {
-      "dir": "PAIR",
-      "name": "Long Europe, short Japan",
-      "line": "Long EWG/EWU vs short EWJ — DAX 92nd pctile, Nikkei z=-2.38",
-      "conviction": 2,
-      "expr": "Long EWG and EWU (50/50) versus short EWJ, dollar-neutral notional. Futures alternative: long DAX, short Nikkei 225, FX-hedged.",
-      "thesis": "Europe is the only developed region where price, breadth and relative strength all point the same direction, while Japan has lost the one thing that was carrying it — a weak yen is no longer generating index gains, which means the semis/export complex inside the Nikkei is doing the damage.",
-      "trigger": "DAX +1.5% today, +3.9% on the month, 5.4% above its 200-day at the 92nd percentile, relative strength +6.8% vs SPX and turning up. FTSE +1.6% at the 93rd percentile. Against that: Nikkei -1.4% today and -11.1% on the month at z=-2.38 with acceleration -2.34, with USDJPY at 158.23 and going nowhere. EWJ -6.4% on the month at z=-1.63.",
-      "stop": "EWJ outperforms the European leg by 4% from entry, or DAX loses its 200-day (5.4% below here).",
-      "target": "8-10 points of relative performance.",
-      "horizon": "2-3 months",
-      "ids": [
-        "GDAXI",
-        "EWG",
-        "EWU",
-        "FTSE",
-        "N225",
-        "EWJ",
-        "USDJPY",
-        "STOXX50E"
-      ]
-    },
-    {
-      "dir": "PAIR",
-      "name": "Mean-revert the dispersion extreme",
-      "line": "Long QQQ vs short RSP — QQQ/SPY z=-2.72 vs RSP/SPY z=+3.34",
-      "conviction": 2,
-      "expr": "Long QQQ against short RSP, equal dollar notional. Cheaper convex version: QQQ Dec call spreads financed by selling RSP upside, now that VIX is 18.39.",
-      "thesis": "Every dispersion gauge in the book is pinned at a multi-year extreme and the vol that caused it has just collapsed. RSP/SPY at z=+3.34 with acceleration +3.76 is the most stretched single reading in the digest; QQQ/SPY at z=-2.72 with acceleration -3.21 is the mirror. These do not persist past the volatility event that creates them.",
-      "trigger": "VIX -11.7% to 18.39 against VIX3M 21.27 — the forced-deleveraging engine is off. On 11/3 QQQ +0.6% and SOXX +2.5% while RSP/SPY fell 0.6%. High-beta/low-vol +2.3% and growth/value +1.4% on the same session off z=-2.92 and z=-2.58.",
-      "stop": "QQQ/SPY closes below 0.890 (a new low beneath the current 0.9084), or NDX breaks its 200-day — it is only 0.8% above it, so this is a tight invalidation.",
-      "target": "QQQ/SPY back to 0.945, roughly 4 points of pair performance.",
-      "horizon": "3-6 weeks",
-      "ids": [
-        "QQQ_SPY",
-        "RSP_SPY",
-        "QQQ",
-        "SPW",
-        "SOXX",
-        "SMH_SPY",
-        "MTUM",
-        "SPHB_SPLV",
-        "VIX"
-      ]
-    },
-    {
-      "dir": "LONG",
-      "name": "Long USD/BRL",
-      "line": "Long USDBRL 5.4623 — BRL can't rally on a 0.6% dollar drop",
-      "conviction": 2,
-      "expr": "Long USDBRL via 3-month NDF or BRL futures. Equity expression for those who can't trade FX: short EWZ.",
-      "thesis": "Brazil is a standalone stress, and the cleanest tell is that the real weakened on a day the dollar broke. Local equity is confirming: BVSP -13.8% on the month at z=-2.80, EWZ -16.9% and 14.3% below its 200-day at the 14th percentile.",
-      "trigger": "USDBRL +0.5% to 5.4623 and +2.1% on the week, +4.6% on the month at z=1.33 and turning up, while DXY -0.6%, EURUSD +0.7% and GBPUSD +0.7%. CEW -0.5% confirms EM FX broadly did not get the dollar memo.",
-      "stop": "5.30 — a close below that means the dollar move finally transmits to LatAm and the local stress is resolving.",
-      "target": "5.75.",
-      "horizon": "1-2 months",
-      "ids": [
-        "USDBRL",
-        "EWZ",
-        "BVSP",
-        "CEW",
-        "USDMXN",
-        "DXY"
+        "SILVER"
       ]
     },
     {
       "dir": "SHORT",
-      "name": "Short homebuilders",
-      "line": "Short ITB/XHB — mortgage 7.24%, the duration bid just died",
+      "name": "Fade the stretched duration rally",
+      "line": "Short TLT: 41bp of 10y rally with acc z=-2.61 is stretched",
       "conviction": 2,
-      "expr": "Short ITB outright, or buy XHB Jan puts 5% out of the money. Pair against long XLF if you want sector-neutral.",
-      "thesis": "The homebuilder rally of the past month was pure duration beta on a 33bp drop in 10-year yields, not a housing improvement. The actual rate the customer pays is 7.24% and rising. Strip the bond rally and there is no earnings engine.",
-      "trigger": "10-year back up 4bp to 4.95% for a third session and 30-year to 5.32%; the 30-year mortgage is +21bp on the month and +109bp year-to-date at the 89th percentile. On 11/3 the group broke: DHI -5.0%, ITB -3.6%, XHB -2.5%, XHB/SPY -2.8%. Both ITB and XHB are now rolling over and below their 200-days despite a +7.9% and +5.5% month.",
-      "stop": "10-year back below 4.70% or the 30-year mortgage back under 7.00% — a genuine rate relief rally would carry this group higher.",
-      "target": "ITB -10% from 93.52; XHB/SPY back toward the 0.125 area.",
+      "expr": "Short TLT, or buy Dec/Jan TLT 80 puts; alternatively short IEF outright. Size for a 10bp adverse move in 10s.",
+      "thesis": "This is a positioning rally, not a repricing of the Fed. Bills haven't moved, so the entire move is term structure compression into a curve that is already too flat to keep going. With breakevens at the 25th percentile and the CPI index up 106bp year-to-date, the disinflation leg is largely priced.",
+      "trigger": "10s -41bp on the month with acceleration z=-2.61, 5s acceleration -2.31, TLT +6.0% at z=1.64 with acceleration 2.12 yet still 2.1% below its 200-day in a downtrend; 3m10y collapsed 40bp to 0.69 with the 3-month bill unchanged at 4.21; 2s10s down to 0.32 at the 22nd percentile; 30-year mortgage still 7.24% and +21bp on the month.",
+      "stop": "TLT above 85 or 10-year yield through 4.65 — that is a growth scare and the thesis is wrong.",
+      "target": "10-year back to 5.10%, TLT 78.",
       "horizon": "4-8 weeks",
       "ids": [
-        "ITB",
-        "XHB",
-        "DHI",
-        "XHB_SPY",
-        "MORTGAGE30US",
+        "TLT",
+        "IEF",
         "DGS10",
         "DGS30",
-        "XLF"
+        "T10Y3M",
+        "T10Y2Y",
+        "T10YIE",
+        "MORTGAGE30US",
+        "MOVE"
       ]
     }
   ],
-  "asof": "2026-11-04"
+  "asof": "2026-11-05"
 }

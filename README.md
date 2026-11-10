@@ -27,6 +27,10 @@ The page opens with:
 4. **What's turning**: on the come / rolling over / accelerating, generated from the data every day
 5. **The charts**: all ~245, filterable by group and sortable by move, acceleration or relative strength
 
+A separate **Scorecard** page (`site/scorecard.html`, linked from the header) tracks how every published
+trade idea has actually done: win rate and average return vs the S&P, breakdowns by conviction and
+direction, an equal-weight "follow every idea" curve, and each idea's status (open, target, stop, expired).
+
 ## How it updates
 
 - `pipeline/universe.py` defines the chart list

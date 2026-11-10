@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EEF1EF">
+<title>Macro Tape Scorecard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#EEF1EF; --surface:#FFFFFF; --surface2:#F6F8F7; --line:#D5DCD8; --grid:#E4E9E6;
+  --ink:#15201B; --ink2:#3F4D46; --muted:#6A7771;
+  --accent:#1E5A8A; --accent-soft:#DCE8F2;
+  --good:#1C7C45; --good-soft:#DDF0E4; --bad:#B8342A; --bad-soft:#F7E0DD; --warn:#9A6414; --warn-soft:#F5EAD4;
+  --display:"IBM Plex Sans Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#0E1412; --surface:#161E1B; --surface2:#1B2521; --line:#2B3833; --grid:#222D29;
+    --ink:#E3EAE6; --ink2:#B6C2BC; --muted:#8A9791;
+    --accent:#7AB0DE; --accent-soft:#1D2F3F;
+    --good:#4FBF7C; --good-soft:#15301F; --bad:#EE7468; --bad-soft:#3A1C19; --warn:#E0A54A; --warn-soft:#382A13;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#0E1412; --surface:#161E1B; --surface2:#1B2521; --line:#2B3833; --grid:#222D29;
+  --ink:#E3EAE6; --ink2:#B6C2BC; --muted:#8A9791;
+  --accent:#7AB0DE; --accent-soft:#1D2F3F;
+  --good:#4FBF7C; --good-soft:#15301F; --bad:#EE7468; --bad-soft:#3A1C19; --warn:#E0A54A; --warn-soft:#382A13;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;margin:0;padding-block:env(safe-area-inset-top,0px) env(safe-area-inset-bottom,0px)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:0 64px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.muted{color:var(--muted)}
+a{color:var(--accent)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.up{color:var(--good)} .dn{color:var(--bad)}
+
+/* top bar (same as the main page) */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .in{max-width:1180px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.01em;white-space:nowrap;color:var(--ink);text-decoration:none}
+.brand small{font-weight:500;color:var(--muted);font-size:13px;margin-left:6px}
+.nav{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav a{font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink2);text-decoration:none;padding:6px 10px;border-radius:6px;white-space:nowrap}
+.nav a:hover{background:var(--surface)}
+.nav a[aria-current="page"]{background:var(--ink);color:var(--bg)}
+@media (max-width:640px){.brand small{display:none}.brand{font-size:17px}.nav{gap:0}.nav a{padding:6px 7px;font-size:12.5px}}
+
+/* hero */
+.hero{padding-block:24px 4px;max-width:78ch}
+.hero h1{font-size:clamp(25px,4.2vw,36px);font-weight:700;margin-top:6px}
+.hero p{color:var(--ink2);font-size:15.5px;margin:10px 0 0}
+.asof{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* stat tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+@media (max-width:860px){.tiles{grid-template-columns:1fr 1fr}}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 13px;min-width:0}
+.tile .v{font-family:var(--display);font-size:30px;font-weight:700;line-height:1.05;margin-top:4px}
+.tile .s{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+section{padding-top:30px}
+.sh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.sh h2{font-size:24px;font-weight:700}
+.sh p{margin:0;color:var(--muted);font-size:13px;max-width:72ch}
+
+/* curve */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.legend{display:flex;gap:16px;font-size:12.5px;color:var(--ink2);flex-wrap:wrap;margin-bottom:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:18px;height:0;border-top:2px solid var(--c)}
+.legend i.dash{border-top-style:dashed}
+.chartbox{position:relative}
+.curve{width:100%;height:260px;display:block;touch-action:pan-y}
+.tip{position:absolute;top:0;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:5px 8px;border-radius:6px;white-space:nowrap;font-family:var(--mono);line-height:1.4}
+
+/* breakdown tables */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media (max-width:980px){.cols3{grid-template-columns:1fr}}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th{font-family:var(--display);font-weight:600;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);text-align:right;padding:4px 6px;border-bottom:1px solid var(--line)}
+.tbl th:first-child,.tbl td:first-child{text-align:left;padding-left:0}
+.tbl td{padding:8px 6px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+.tbl tr:last-child td{border-bottom:0}
+.wr{display:inline-flex;align-items:center;gap:6px}
+.wr .bar{width:44px;height:6px;border-radius:3px;background:var(--surface2);position:relative;overflow:hidden;border:1px solid var(--line)}
+.wr .bar b{position:absolute;inset:0 auto 0 0;background:var(--ink2)}
+.panel h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.cols3>.panel{min-width:0;overflow-x:auto}
+@media (max-width:420px){.tbl{font-size:12.5px}.tbl td,.tbl th{padding-inline:4px}.wr .bar{width:30px}}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* ideas */
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-bottom:12px}
+.tabs button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13px;white-space:nowrap;cursor:pointer;font-family:var(--display);font-weight:600}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px}
+@media (max-width:420px){.ideas{grid-template-columns:1fr}}
+.idea{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 13px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.idea .hd{display:flex;align-items:flex-start;gap:8px}
+.idea h3{font-size:16px;font-weight:700;flex:1;min-width:0}
+.dir{font-family:var(--display);font-weight:700;font-size:11.5px;letter-spacing:.06em;padding:2px 7px;border-radius:4px;flex:none;margin-top:1px}
+.dir.long{background:var(--good-soft);color:var(--good)}
+.dir.short{background:var(--bad-soft);color:var(--bad)}
+.dir.pair{background:var(--accent-soft);color:var(--accent)}
+.ret{font-family:var(--display);font-size:22px;font-weight:700;line-height:1;flex:none}
+.legs{font-family:var(--mono);font-size:12.5px;background:var(--surface2);border-radius:6px;padding:5px 8px;color:var(--ink)}
+.meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;color:var(--muted)}
+.badge{font-family:var(--display);font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:1px 6px;border-radius:3px;white-space:nowrap}
+.badge.target{background:var(--good-soft);color:var(--good)}
+.badge.stop{background:var(--bad-soft);color:var(--bad)}
+.badge.expired{background:var(--warn-soft);color:var(--warn)}
+.badge.open{background:var(--accent-soft);color:var(--accent)}
+.badge.pending,.badge.recon{background:var(--surface2);color:var(--muted);border:1px solid var(--line)}
+.spark{width:100%;height:46px;display:block}
+.conv{display:inline-flex;gap:3px;align-items:center}
+.conv b{width:7px;height:7px;border-radius:50%;background:var(--line);display:inline-block}
+.conv b.on{background:var(--ink2)}
+details{font-size:13px;color:var(--ink2)}
+details summary{cursor:pointer;color:var(--muted);font-size:12.5px}
+details p{margin:6px 0 0}
+.more{margin-top:12px;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:8px 14px;cursor:pointer;font-family:var(--display);font-weight:600}
+.rules{margin:0;padding-left:18px;font-size:13.5px;color:var(--ink2);max-width:80ch}
+.rules li{margin-bottom:6px}
+.err{padding:40px 0;color:var(--bad)}
+</style>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./">Macro Tape<small>the Druckenmiller-style daily scan</small></a>
+  <nav class="nav">
+    <a href="./">Today</a><a href="./#trades">Trades</a><a href="scorecard.html" aria-current="page">Scorecard</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="app">
+  <p class="muted" style="padding-top:30px">Loading the scorecard…</p>
+</main>
+
+<script>
+(async function(){
+const $ = (s, el=document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let T;
+try {
+  const r = await fetch("trades.json", {cache: "no-cache"});
+  if (!r.ok) throw new Error(r.status);
+  T = await r.json();
+} catch (e) {
+  $("#app").innerHTML = `<p class="err">The scorecard data isn't available yet. It's built by the next data refresh.</p>`;
+  return;
+}
+
+const pct = (x, d=1) => x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(d) + "%";
+const cls = x => x == null ? "" : x > 0 ? "up" : x < 0 ? "dn" : "";
+const fmtDate = s => s ? new Date(s + (s.length === 10 ? "T12:00:00Z" : "")).toLocaleDateString("en-US", {month:"short", day:"numeric", timeZone:"UTC"}) : "–";
+const STATUS = {target:"Target hit", stop:"Stopped out", expired:"Expired", open:"Open", pending:"Pending entry", no_data:"No price data"};
+const dirLabel = d => ({LONG:"Long", SHORT:"Short", PAIR:"Pair"})[d] || d;
+const convDots = n => `<span class="conv" title="Conviction ${n} of 3">${[1,2,3].map(k => `<b class="${k <= (n||0) ? "on" : ""}"></b>`).join("")}</span>`;
+const legsText = legs => legs.map(l => `${l.side === "long" ? "Long" : "Short"} ${esc(l.id)}${l.weight !== 1 ? " ×" + l.weight : ""}`).join(" · ");
+
+const S = T.summary, A = S.all || {n: 0}, C = S.closed || {n: 0}, O = S.outcomes || {};
+const ideas = T.ideas || [];
+const first = ideas.length ? ideas[ideas.length - 1].published : null;
+
+// ---------- hero + tiles ----------
+const headline = A.n
+  ? `${A.n} ideas tracked since ${fmtDate(first && first.slice(0,10))}: ${A.win_rate}% in the money, ${pct(A.avg_ret)} on average`
+  : "No ideas have been scored yet";
+const tiles = [
+  {k: "Ideas tracked", v: A.n ?? 0, s: `${O.open || 0} open · ${C.n || 0} closed · ${O.pending || 0} awaiting entry`},
+  {k: "In the money", v: A.n ? A.win_rate + "%" : "–", s: `of ${A.n || 0} ideas, open ones at today's price`},
+  {k: "Average return", v: A.n ? pct(A.avg_ret) : "–", c: cls(A.avg_ret), s: `S&P over the same windows: ${pct(A.avg_spy)}`},
+  {k: "Closed so far", v: C.n ? C.win_rate + "%" : "–", s: `${O.target || 0} hit target · ${O.stop || 0} stopped · ${O.expired || 0} expired (n=${C.n || 0})`},
+];
+
+// ---------- breakdown tables ----------
+function table(title, rows) {
+  return `<div class="panel"><h3>${title}</h3><table class="tbl">
+    <thead><tr><th></th><th>Ideas</th><th>In the money</th><th>Avg</th><th>S&amp;P</th></tr></thead><tbody>
+    ${rows.map(([label, g]) => {
+      const a = (g && g.all) || {n: 0};
+      return `<tr><td>${label}</td><td class="num">${a.n || 0}</td>
+        <td class="num">${a.n ? `<span class="wr"><span class="bar"><b style="width:${a.win_rate}%"></b></span>${a.win_rate}%</span>` : "–"}</td>
+        <td class="num ${cls(a.avg_ret)}">${a.n ? pct(a.avg_ret) : "–"}</td>
+        <td class="num muted">${a.n ? pct(a.avg_spy) : "–"}</td></tr>`;
+    }).join("")}</tbody></table></div>`;
+}
+const B = T.by || {};
+
+$("#app").innerHTML = `
+<div class="hero">
+  <div class="eyebrow">Trade scorecard</div>
+  <h1>${esc(headline)}</h1>
+  <p>Every trade idea the dashboard has published, scored after the fact with fixed rules. Ideas still open count at today's price. Each idea is scored with liquid stand-ins, so an options idea is judged on the direction of its underlying.</p>
+  <div class="asof">Updated ${new Date(T.generated).toLocaleString("en-US", {dateStyle:"medium", timeStyle:"short"})} · prices as of ${new Date(T.data_generated).toLocaleString("en-US", {dateStyle:"medium", timeStyle:"short"})}</div>
+</div>
+<div class="tiles">${tiles.map(t => `<div class="tile"><div class="eyebrow">${t.k}</div><div class="v num ${t.c || ""}">${t.v}</div><div class="s">${t.s}</div></div>`).join("")}</div>
+
+<section id="curve">
+  <div class="sh"><h2>Follow every idea</h2><p>An equal-weight portfolio of every idea while it's open, against the S&amp;P over the same dates. Both start at 100.</p></div>
+  <div class="panel">
+    <div class="legend"><span><i style="--c:var(--accent)"></i>Every idea, equal weight</span><span><i class="dash" style="--c:var(--ink2)"></i>S&amp;P 500 (SPY)</span></div>
+    <div class="chartbox"><svg class="curve" id="curveSvg" role="img" aria-label="Equity curve of following every idea versus the S&P 500"></svg><div class="tip" id="tip" hidden></div></div>
+  </div>
+</section>
+
+<section id="breakdown">
+  <div class="sh"><h2>Where the edge is, and isn't</h2><p>Counting every idea, open ones marked to market. Small samples swing a lot, so read the "Ideas" column before the percentages.</p></div>
+  <div class="cols3">
+    ${table("By conviction", [["High " + convDots(3), B.conviction?.["3"]], ["Medium " + convDots(2), B.conviction?.["2"]], ["Low " + convDots(1), B.conviction?.["1"]]])}
+    ${table("By direction", [["Long", B.dir?.LONG], ["Short", B.dir?.SHORT], ["Pair", B.dir?.PAIR]])}
+    ${table("By record", [["Live", B.source?.live], ["Reconstructed", B.source?.reconstructed]])}
+  </div>
+  <p class="note">"Live" ideas carried their own scoring legs when published. "Reconstructed" ideas came before that, and their stand-ins were written afterwards from the prose.</p>
+</section>
+
+<section id="ideas">
+  <div class="sh"><h2>Every idea</h2><p>Newest first. "×N" means the same position was recommended N times while it was open; it counts once.</p></div>
+  <div class="tabs" id="tabs" role="group" aria-label="Filter ideas">
+    ${[["open","Open"],["closed","Closed"],["all","All"]].map(([k, l], i) => `<button data-f="${k}" aria-pressed="${i === 0}">${l}</button>`).join("")}
+  </div>
+  <div class="ideas" id="list"></div>
+  <button class="more" id="more" hidden>Show all</button>
+</section>
+
+<section id="rules">
+  <div class="sh"><h2>How ideas are scored</h2></div>
+  <ol class="rules">${(T.rules || []).map(r => `<li>${esc(r)}</li>`).join("")}</ol>
+  ${(T.unscored || []).length ? `<p class="note">Not scoreable (${T.unscored.length}): ${T.unscored.map(u => esc(u.name)).join(" · ")}. These are inflation-breakeven trades, which need TIPS prices the dashboard doesn't track.</p>` : ""}
+  <p class="note">For idea generation only, not investment advice.</p>
+</section>`;
+
+// ---------- idea cards ----------
+function spark(path, ret) {
+  if (!path || path.length < 2) return "";
+  const W = 300, H = 46, pad = 3;
+  const xs = path.map(p => p[0]), ys = path.map(p => p[1]).concat([0]);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs) || 1, y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const X = x => pad + (x - x0) / ((x1 - x0) || 1) * (W - 2 * pad);
+  const Y = y => H - pad - (y - y0) / ((y1 - y0) || 1) * (H - 2 * pad);
+  const d = path.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join("");
+  const col = ret > 0 ? "var(--good)" : ret < 0 ? "var(--bad)" : "var(--muted)";
+  const last = path[path.length - 1];
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="${pad}" x2="${W - pad}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--line)" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>
+    <path d="${d}" fill="none" stroke="${col}" stroke-width="1.7" vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+    <circle cx="${X(last[0])}" cy="${Y(last[1])}" r="2.6" fill="${col}"/></svg>`;
+}
+function card(i) {
+  const st = i.status;
+  const exits = [i.target_pct != null ? `target ${pct(i.target_pct, 0)}` : null, i.stop_pct != null ? `stop ${pct(i.stop_pct, 0)}` : null, `${i.horizon_days}d horizon`].filter(Boolean).join(" · ");
+  const when = st === "pending" ? `Published ${fmtDate(i.published.slice(0,10))}, enters at the next close`
+    : `${fmtDate(i.entry_date)} → ${i.exit_date ? fmtDate(i.exit_date) : "now"} · ${i.days_held}d`;
+  return `<article class="idea">
+    <div class="hd"><span class="dir ${(i.dir || "").toLowerCase()}">${esc(dirLabel(i.dir))}</span><h3>${esc(i.name)}</h3>
+      <span class="ret num ${cls(i.ret)}">${st === "pending" || st === "no_data" ? "–" : pct(i.ret)}</span></div>
+    <div class="legs">${legsText(i.legs)}</div>
+    ${st !== "pending" && st !== "no_data" ? spark(i.path, i.ret) : ""}
+    <div class="meta">
+      <span class="badge ${st}">${STATUS[st] || st}</span>
+      ${i.reconstructed ? `<span class="badge recon">Reconstructed</span>` : ""}
+      ${convDots(i.conviction)}
+      ${i.times_published > 1 ? `<span>×${i.times_published}</span>` : ""}
+      <span>${when}</span>
+      ${i.spy_ret != null && st !== "pending" ? `<span>S&amp;P ${pct(i.spy_ret)}</span>` : ""}
+    </div>
+    <div class="meta"><span>${exits}</span>${i.mfe != null ? `<span>best ${pct(i.mfe)} · worst ${pct(i.mae)}</span>` : ""}</div>
+    ${i.thesis || i.expr ? `<details><summary>Thesis and original expression</summary>${i.thesis ? `<p>${esc(i.thesis)}</p>` : ""}${i.expr ? `<p class="muted">${esc(i.expr)}</p>` : ""}</details>` : ""}
+  </article>`;
+}
+let filter = "open", showAll = false;
+const PAGE = 24;
+function renderList() {
+  const pick = {open: i => i.status === "open" || i.status === "pending",
+                closed: i => ["target", "stop", "expired"].includes(i.status),
+                all: () => true}[filter];
+  const rows = ideas.filter(pick);
+  $("#list").innerHTML = rows.slice(0, showAll ? rows.length : PAGE).map(card).join("") || `<p class="muted">Nothing here yet.</p>`;
+  const more = $("#more");
+  more.hidden = showAll || rows.length <= PAGE;
+  more.textContent = `Show all ${rows.length}`;
+}
+$("#tabs").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  filter = b.dataset.f; showAll = false;
+  $("#tabs").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderList();
+});
+$("#more").addEventListener("click", () => { showAll = true; renderList(); });
+renderList();
+
+// ---------- equity curve ----------
+function drawCurve() {
+  const svg = $("#curveSvg"), tip = $("#tip");
+  const pts = (T.curve || []).filter(p => p[1] != null);
+  if (pts.length < 2) { svg.outerHTML = `<p class="muted">Not enough history yet.</p>`; return; }
+  const W = svg.clientWidth || 640, H = 260, L = 8, R = 62, Tp = 10, Bm = 24;
+  const ys = pts.flatMap(p => [p[1], p[2]]).filter(v => v != null);
+  let y0 = Math.min(...ys), y1 = Math.max(...ys); const padY = (y1 - y0) * 0.08 || 1; y0 -= padY; y1 += padY;
+  const X = i => L + i / (pts.length - 1) * (W - L - R), Y = v => Tp + (1 - (v - y0) / (y1 - y0)) * (H - Tp - Bm);
+  const line = k => pts.map((p, i) => p[k] == null ? "" : (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[k]).toFixed(1)).join("");
+  const span = y1 - y0, step = [0.5, 1, 2, 2.5, 5, 10].find(s => span / s <= 5) || 10;
+  const ticks = []; for (let v = Math.ceil(y0 / step) * step; v <= y1; v += step) ticks.push(+v.toFixed(2));
+  const months = []; let lastM = -1;
+  pts.forEach((p, i) => { const m = +p[0].slice(5, 7); if (m !== lastM && i > 0) months.push(i); lastM = m; });
+  const mname = i => new Date(pts[i][0] + "T12:00:00Z").toLocaleString("en-US", {month: "short", timeZone: "UTC"});
+  const last = pts[pts.length - 1];
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  svg.innerHTML = `
+    ${ticks.map(v => `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--grid)"/>
+      <text x="${W - R + 6}" y="${Y(v) + 4}" font-size="11" fill="var(--muted)" font-family="var(--mono)">${v}</text>`).join("")}
+    <line x1="${L}" x2="${W - R}" y1="${Y(100)}" y2="${Y(100)}" stroke="var(--line)" stroke-width="1.5"/>
+    ${months.map(i => `<text x="${X(i)}" y="${H - 6}" font-size="11" fill="var(--muted)" text-anchor="middle">${mname(i)}</text>`).join("")}
+    <path d="${line(2)}" fill="none" stroke="var(--ink2)" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <path d="${line(1)}" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="${X(pts.length - 1)}" cy="${Y(last[1])}" r="4" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/>
+    <line id="cx" y1="${Tp}" y2="${H - Bm}" stroke="var(--ink2)" visibility="hidden"/>
+    <rect x="${L}" y="0" width="${W - L - R}" height="${H}" fill="transparent" id="hit"/>`;
+  const hit = $("#hit", svg), cx = $("#cx", svg);
+  const move = ev => {
+    const r = svg.getBoundingClientRect(), mx = (ev.clientX - r.left) * (W / r.width);
+    const i = Math.max(0, Math.min(pts.length - 1, Math.round((mx - L) / (W - L - R) * (pts.length - 1))));
+    const p = pts[i];
+    cx.setAttribute("x1", X(i)); cx.setAttribute("x2", X(i)); cx.setAttribute("visibility", "visible");
+    tip.hidden = false;
+    tip.innerHTML = `${fmtDate(p[0])}<br>Ideas ${pct(p[1] - 100)} · S&amp;P ${p[2] == null ? "–" : pct(p[2] - 100)}`;
+    const tx = X(i) * (r.width / W);
+    tip.style.left = Math.min(Math.max(0, tx - tip.offsetWidth / 2), r.width - tip.offsetWidth) + "px";
+  };
+  const leave = () => { tip.hidden = true; cx.setAttribute("visibility", "hidden"); };
+  hit.addEventListener("pointermove", move); hit.addEventListener("pointerdown", move); hit.addEventListener("pointerleave", leave);
+}
+drawCurve();
+let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(drawCurve, 150); });
+})();
+</script>
+</body>
+</html>

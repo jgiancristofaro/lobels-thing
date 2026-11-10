@@ -35,6 +35,10 @@ The page opens with:
   to regenerate `site/notes.json` — the headline, summary paragraphs, good/bad list and trade ideas —
   so the written read updates with fresh insight, not just the charts. Requires an `ANTHROPIC_API_KEY`
   repo secret (see below); without one it's skipped and the last-written `notes.json` stays as-is.
+- `pipeline/track_trades.py` scores every trade idea ever published (rebuilt from git history each run,
+  no saved state) and writes `site/trades.json` for the Scorecard page. Each idea is scored with liquid
+  stand-ins (its `legs`); ideas from before 2026-11-10 use hand-written stand-ins in
+  `pipeline/backfill_legs.json` and are marked reconstructed.
 - `.github/workflows/update.yml` runs the whole pipeline every weekday, twice a day, targeting
   U.S. Eastern **7:15 AM** and **6:37 PM** (after the close), commits both files, and deploys to
   GitHub Pages. GitHub starts scheduled runs hours late (observed ~5.5h for the morning slot, ~3h for

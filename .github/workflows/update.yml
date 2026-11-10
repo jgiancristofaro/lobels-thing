@@ -61,6 +61,8 @@ jobs:
             sleep "$wait"
           fi
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history: the trade tracker rebuilds the record from every past notes.json
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -81,8 +83,15 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         timeout-minutes: 10
+      - name: Score every published trade idea
+        # Rebuilds site/trades.json from git history + data.json on every run (no API calls, no
+        # saved state). continue-on-error: a tracker bug must never block the data or the deploy;
+        # the previously committed trades.json simply stays in place.
+        continue-on-error: true
+        run: python -u pipeline/track_trades.py
+        timeout-minutes: 5
       - name: Commit refreshed data
-        # site/data.json and site/notes.json are fully regenerated every run, so they never need
+        # site/data.json, notes.json and trades.json are fully regenerated every run, so they never need
         # a real merge: rebasing or merging them against a concurrent push just produces spurious
         # conflicts. Instead, rebase our change onto whatever is latest on the branch right before
         # committing, retrying a couple of times in case something else pushes in the same window.
@@ -93,6 +102,7 @@ jobs:
             git fetch origin "${{ github.ref_name }}"
             git reset "origin/${{ github.ref_name }}"
             git add site/data.json site/notes.json
+            if [ -f site/trades.json ]; then git add site/trades.json; fi
             git diff --cached --quiet && { echo "no data changes"; break; }
             git commit -m "data: refresh $(date -u +%Y-%m-%dT%H:%MZ)"
             git push origin "HEAD:${{ github.ref_name }}" && break

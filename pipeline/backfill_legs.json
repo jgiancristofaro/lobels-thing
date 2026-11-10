@@ -1,0 +1,4677 @@
+{
+ "_note": "Hand-written scoring stand-ins for trade ideas published before trades carried their own 'legs' (before 2026-11-10). Keyed by lower-cased trade name. Options/vol trades are scored as the underlying direction; steepeners as long IEF / short TLT; target_pct only where the prose states a % move on the position (low end of a range). Ideas scored from this file are flagged 'reconstructed'.",
+ "trades": {
+  "homebuilders": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "oil tax on the consumer": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long bonds": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "fade parabolic semis, own software": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SOXX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "cheap crash protection": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "copper miners on the dip": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "long equity vol vs. short rate vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "short the long end (tlt)": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long qqq / short iwm": {
+   "legs": [
+    {
+     "id": "QQQ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IWM",
+     "side": "short",
+     "weight": 0.85
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "long gold miners (gdx) into capitulation": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short housing and the levered consumer": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "fade the oil-beta equities (xop)": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long crypto beta (ibit + mstr)": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "MSTR",
+     "side": "long",
+     "weight": 0.25
+    }
+   ],
+   "target_pct": null
+  },
+  "2s30s bear steepener": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "equity vol vs a 5.17% 10-year": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "transports vs s&p on the fuel crash": {
+   "legs": [
+    {
+     "id": "IYT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "gold miners capitulation reversal": {
+   "legs": [
+    {
+     "id": "GDXJ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "homebuilders into a 7.03% mortgage": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "bx as the private-credit canary": {
+   "legs": [
+    {
+     "id": "BX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long usd vs mxn": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "buy index vol before the vol complex catches rates": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "short the us consumer at a 7% mortgage": {
+   "legs": [
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "floating rate over long-duration ig": {
+   "legs": [
+    {
+     "id": "BKLN",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "LQD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.5
+  },
+  "copper over gold, expressed in the miners": {
+   "legs": [
+    {
+     "id": "FCX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "NEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "stay long the em fx squeeze in the peso": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the leverage complex, not the banks' credit": {
+   "legs": [
+    {
+     "id": "XLF",
+     "side": "short",
+     "weight": 0.6
+    },
+    {
+     "id": "BX",
+     "side": "short",
+     "weight": 0.2
+    },
+    {
+     "id": "GS",
+     "side": "short",
+     "weight": 0.2
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "semis dispersion: quality compute vs the extended tail": {
+   "legs": [
+    {
+     "id": "NVDA",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "TSM",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "AMD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "short the front end (2-year)": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "own convexity while vol confirms": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "long loans / short high yield & ig": {
+   "legs": [
+    {
+     "id": "BKLN",
+     "side": "long",
+     "weight": 1.2
+    },
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 0.6
+    },
+    {
+     "id": "LQD",
+     "side": "short",
+     "weight": 0.4
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "long gold vs short silver": {
+   "legs": [
+    {
+     "id": "GLD",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SILVER",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "short housing at a 7% mortgage": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long energy majors vs short transports": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IYT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short the leverage complex vs healthcare": {
+   "legs": [
+    {
+     "id": "XLF",
+     "side": "short",
+     "weight": 0.67
+    },
+    {
+     "id": "BX",
+     "side": "short",
+     "weight": 0.33
+    },
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "own equity vol against bond vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "short hyg vs long ief": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.9
+  },
+  "long smh vs short kre": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "KRE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "gold miners into the washout": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "short eur/usd": {
+   "legs": [
+    {
+     "id": "EURUSD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short home construction": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short oil services": {
+   "legs": [
+    {
+     "id": "OIH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long-end treasuries (tlt)": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "blackstone (bx)": {
+   "legs": [
+    {
+     "id": "BX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 17.0
+  },
+  "gold miners (gdx)": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short oih / long xle": {
+   "legs": [
+    {
+     "id": "OIH",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "usd/mxn": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "spx downside convexity": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the long end / 2s30s steepener": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long qqq vs short iwm": {
+   "legs": [
+    {
+     "id": "QQQ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IWM",
+     "side": "short",
+     "weight": 0.85
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "short financials / capital markets": {
+   "legs": [
+    {
+     "id": "XLF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 7.0
+  },
+  "long xop vs short oih": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "OIH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long usd/mxn": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long index tail hedge": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long bitcoin via ibit": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the long end / own bond vol": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.4
+  },
+  "long equity tail — vol is mispriced against breadth": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "long semis / short small caps": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IWM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short private credit / capital markets": {
+   "legs": [
+    {
+     "id": "BX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 17.0
+  },
+  "short homebuilders into a 7%+ mortgage": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long japan equities": {
+   "legs": [
+    {
+     "id": "EWJ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long brazil vs em": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 7.0
+  },
+  "short developed ex-us vs long s&p": {
+   "legs": [
+    {
+     "id": "EFA",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "short mexico equity (eww) / long usdmxn": {
+   "legs": [
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 7.0
+  },
+  "short us housing (itb)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long equity vol against cheap spot": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long semis vs short financials": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long loans vs short high yield": {
+   "legs": [
+    {
+     "id": "BKLN",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "long bitcoin exposure (ibit)": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "long spy / short efa": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EFA",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "2s10s steepener": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "energy equities (xle/xop)": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 0.67
+    },
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 0.33
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "us consumer discretionary": {
+   "legs": [
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "grid equipment vs power producers": {
+   "legs": [
+    {
+     "id": "GRID",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "NLR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "bitcoin via ibit": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 18.0
+  },
+  "cheap s&p downside vs expensive bond vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "long semis vs short equal-weight": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short housing at a 100th-percentile mortgage rate": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "electrical equipment over power generators": {
+   "legs": [
+    {
+     "id": "ETN",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "GRID",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "NLR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "brazil over mexico": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "japan, unhedged": {
+   "legs": [
+    {
+     "id": "EWJ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "buy cheap index downside": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "short the capital-markets complex": {
+   "legs": [
+    {
+     "id": "BX",
+     "side": "short",
+     "weight": 0.67
+    },
+    {
+     "id": "IAI",
+     "side": "short",
+     "weight": 0.33
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "buy index downside while vol is at the 10th percentile": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "long hyg vs short lqd": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "LQD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "long gev + etn vs short ceg + vst + nlr": {
+   "legs": [
+    {
+     "id": "GRID",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "NLR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "long ewz vs short eww": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short home construction (itb)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long ibit (small, with mstr as the levered leg)": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 18.0
+  },
+  "equity vol against bond vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "long-end treasuries": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "home construction": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "brazil into the 25 october runoff": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null,
+   "horizon_days": 45
+  },
+  "semis over brokers": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IAI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "energy equity catch-down": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "crypto beta off a low base": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "MSTR",
+     "side": "long",
+     "weight": 0.33
+    }
+   ],
+   "target_pct": null
+  },
+  "short xop into the crude break": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 13.0
+  },
+  "long usdcad": {
+   "legs": [
+    {
+     "id": "USDCAD",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "own spx convexity against bond vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long ewz / short eww": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long bitcoin beta via ibit, mstr tail": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long smh / short iwm": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IWM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short itb on the mortgage shock": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long equity tails vs cheap vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "long copper miners vs short gold miners": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GDX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long cybersecurity (cibr)": {
+   "legs": [
+    {
+     "id": "CIBR",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long nuclear/power rebound (nlr)": {
+   "legs": [
+    {
+     "id": "NLR",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long s&p vs short russell 2000": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IWM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "buy cheap s&p downside vs rich bond vol": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long spy vs short efa": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EFA",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "fade the housing bounce (itb)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long brazil vs short india": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "INDA",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "2s30s steepener": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short mstr as the crypto-beta fade": {
+   "legs": [
+    {
+     "id": "MSTR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 20.0
+  },
+  "2s30s steepener via short tlt / long ief": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 2.2
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short itb (home construction)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long equity tails (spx put spreads / vix3m)": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long ewz / short inda": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "INDA",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long xlv / short xli": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long vst (gas-fired power) / short ura": {
+   "legs": [
+    {
+     "id": "VST",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "URANIUM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "long xop vs short spy": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "own equity downside — vol is mispriced vs breadth": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.5
+  },
+  "short housing (itb)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short iai vs long xlv": {
+   "legs": [
+    {
+     "id": "IAI",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long software vs short semis": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "buy index downside while it's cheap": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "short homebuilders into the bounce": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "energy over discretionary": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "brazil equity": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "ai cash flow over ai debt": {
+   "legs": [
+    {
+     "id": "ORCL",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "MSFT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "short india equity": {
+   "legs": [
+    {
+     "id": "INDA",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "buy cheap index convexity into a 96th-percentile s&p": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short home construction into a 7.40% mortgage": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "short em beta against the s&p on the dollar squeeze": {
+   "legs": [
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.5
+  },
+  "fade e&p beta after the crude give-back": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "copper miners catching up to the metal": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long software against semiconductors": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "brazil — the one em with currency and equity agreeing": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 13.0
+  },
+  "long software/cyber vs short semis": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "CIBR",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short homebuilders": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long brazil vs short mexico": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "copper miners catch-up": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "cheap convexity on the index": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "long healthcare vs short banks": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "KRE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short the capex periphery": {
+   "legs": [
+    {
+     "id": "DE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "software over semis (igv vs smh)": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 0.8
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "us homebuilders (itb)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "copper miners (copx)": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "brazil over mexico (ewz vs eww)": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "index convexity (dec spx puts / vix calls)": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "regional banks into earnings (kre vs spy)": {
+   "legs": [
+    {
+     "id": "KRE",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "healthcare over discretionary (xlv vs xly)": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long software vs semis (igv/smh)": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "long copper equity vs gold miners": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GDX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "buy index convexity": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long healthcare vs consumer discretionary": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short crypto beta (mstr)": {
+   "legs": [
+    {
+     "id": "MSTR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 20.0
+  },
+  "software over silicon": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "us housing": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "index convexity": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "energy equity vs the barrel": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "copper equity": {
+   "legs": [
+    {
+     "id": "COPX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "bitcoin beta": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "long xop / short jets": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "JETS",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short regional banks (kre)": {
+   "legs": [
+    {
+     "id": "KRE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "long igv / short smh": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "long index convexity (spy puts / vix calls)": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "long fcx / short gdx": {
+   "legs": [
+    {
+     "id": "FCX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GDX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long xop vs short iwm": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IWM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short itb into the mortgage spike": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "buy index vol / downside convexity": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long igv vs short smh": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long fcx vs short gdx": {
+   "legs": [
+    {
+     "id": "FCX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GDX",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "short kre vs long spy": {
+   "legs": [
+    {
+     "id": "KRE",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long health care vs short semis": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "buy index vol / spx downside": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.5
+  },
+  "short the ai-power build-out complex": {
+   "legs": [
+    {
+     "id": "VST",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "CEG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "short eur against usd": {
+   "legs": [
+    {
+     "id": "EURUSD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long energy vs short metals & mining": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XME",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "2s10s flattener": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short high yield vs treasuries": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.5
+  },
+  "own equity vol into cheap spot": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "health care over discretionary": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 7.0
+  },
+  "fade e&p beta, keep the majors": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "XOM",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "regional banks into a flattening curve": {
+   "legs": [
+    {
+     "id": "KRE",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "housing, where 7.40% actually bites": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "korea capitulation bounce": {
+   "legs": [
+    {
+     "id": "EWY",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long xlv / short xlf": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "software over semis": {
+   "legs": [
+    {
+     "id": "IGV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "short xle": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "long gold miners (gdx)": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "spx put spread - own cheap vol, sell the fat tail": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.6
+  },
+  "copper over gold": {
+   "legs": [
+    {
+     "id": "FCX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short energy equities": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "2s30s bull steepener": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "own cheap equity tail": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "crypto beta on the dollar break": {
+   "legs": [
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 0.67
+    },
+    {
+     "id": "COIN",
+     "side": "long",
+     "weight": 0.33
+    }
+   ],
+   "target_pct": null
+  },
+  "health care over financials": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "energy over the index": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "5-year breakevens": {
+   "legs": [],
+   "target_pct": null
+  },
+  "high yield credit": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "nasdaq downside convexity": {
+   "legs": [
+    {
+     "id": "QQQ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "brazil over em": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "big pharma over small biotech": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XBI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short homebuilders (xhb/itb)": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long xle / short xli": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long korea (ewy)": {
+   "legs": [
+    {
+     "id": "EWY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "spx downside while spot vol cheapens": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long brazil (ewz)": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short usdmxn": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "2s30s curve steepener": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short high-yield credit via hyg puts": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long energy e&p (xop) vs spy": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long qual vs short sphb": {
+   "legs": [
+    {
+     "id": "QUAL",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPHB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 7.0
+  },
+  "long brazil (ewz) vs eem": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short long-duration treasuries (tlt)": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short korea (ewy)": {
+   "legs": [
+    {
+     "id": "EWY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long volatility into a cheap curve": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long xlv / short smh": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short the ai-power complex (gev)": {
+   "legs": [
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long rsp / short qqq": {
+   "legs": [
+    {
+     "id": "SPW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "QQQ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "short hyg vs long ief — credit hasn't confirmed": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.5
+  },
+  "2s10s steepener — fade today's flattening": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long brent vs short wti": {
+   "legs": [
+    {
+     "id": "BRENT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "WTI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "health care relative to the index": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "equal-weight over nasdaq": {
+   "legs": [
+    {
+     "id": "SPW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "QQQ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "ai-power derivative complex": {
+   "legs": [
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "NLR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "brazil equities": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "index tail hedge": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  },
+  "short usd/mxn": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long health care vs short communications": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLC",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "buy index downside while convexity is cheap": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long energy vs short industrials": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long brent / short wti": {
+   "legs": [
+    {
+     "id": "BRENT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "WTI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "three-month s&p downside": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "homebuilders into the bounce": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "brazil over china": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "FXI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "10-year breakevens vs nominals": {
+   "legs": [],
+   "target_pct": null
+  },
+  "short mstr vs long ibit": {
+   "legs": [
+    {
+     "id": "MSTR",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "low-vol over high-beta": {
+   "legs": [
+    {
+     "id": "SPLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPHB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "ai power capex": {
+   "legs": [
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "fade the housing pop": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "healthcare leadership": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "fade the homebuilder squeeze": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "energy equity over industrials": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "high yield catches down": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "short long-end duration": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "oil services catch-up vs e&p": {
+   "legs": [
+    {
+     "id": "OIH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "fade the crowded staples bid": {
+   "legs": [
+    {
+     "id": "XLP",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "tactical semiconductor bounce": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "latin america dispersion": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "gold over silver": {
+   "legs": [
+    {
+     "id": "GLD",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SILVER",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "high yield on ai debt contagion": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.5
+  },
+  "belly duration via ief": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.0
+  },
+  "short hyg / long lqd": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "LQD",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.5
+  },
+  "health care via xlv": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "fade xop": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "mexico over brazil": {
+   "legs": [
+    {
+     "id": "EWW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWZ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "semis washout bounce": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "belly of the curve into the fomc": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 0.5
+    }
+   ],
+   "target_pct": null
+  },
+  "short crude on the product crack": {
+   "legs": [
+    {
+     "id": "WTI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 11.0
+  },
+  "sell the discretionary bounce": {
+   "legs": [
+    {
+     "id": "XLP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "short comm services": {
+   "legs": [
+    {
+     "id": "XLC",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long duration into the fomc": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "fade the crude-beta extension": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "defensive acceleration": {
+   "legs": [
+    {
+     "id": "SPLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPHB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "korea mean reversion": {
+   "legs": [
+    {
+     "id": "EWY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the euro at 52-week lows": {
+   "legs": [
+    {
+     "id": "EURUSD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "health care over communications": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLC",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "fade extended energy equities": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "beta over defense": {
+   "legs": [
+    {
+     "id": "SPHB",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPLV",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "semis relative-strength turn": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "belly duration": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.0
+  },
+  "meta as the funding short": {
+   "legs": [
+    {
+     "id": "META",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "transports turn": {
+   "legs": [
+    {
+     "id": "IYT",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short the peso into a 97th-percentile dollar": {
+   "legs": [
+    {
+     "id": "USDMXN",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "oil services (oih) as the un-extended way to own $100 crude": {
+   "legs": [
+    {
+     "id": "OIH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "short tlt into the fed — the duration rally is done": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short eurusd — 0th percentile with no stabilizer": {
+   "legs": [
+    {
+     "id": "EURUSD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long taiwan (ewt) vs short korea (ewy)": {
+   "legs": [
+    {
+     "id": "EWT",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long silver vs gold — fade a z=1.63 ratio blowout": {
+   "legs": [
+    {
+     "id": "SILVER",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long xli vs short xlu — unwind the defensive crowd": {
+   "legs": [
+    {
+     "id": "XLI",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLU",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short lmt vs long ita — fade the single-name defense squeeze": {
+   "legs": [
+    {
+     "id": "LMT",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "ITA",
+     "side": "long",
+     "weight": 1.5
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "2s30s steepener — short the long bond against the front end": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "energy e&p over the index": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "short home construction into a 5% ten-year": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "silicon over electrons": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 0.5
+    },
+    {
+     "id": "NLR",
+     "side": "short",
+     "weight": 0.5
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "steepener equity expression: banks over bond proxies": {
+   "legs": [
+    {
+     "id": "XLF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLU",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "buy convexity while it is on sale": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "health care and biotech as the new defensive growth": {
+   "legs": [
+    {
+     "id": "IBB",
+     "side": "long",
+     "weight": 0.6
+    },
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 0.4
+    }
+   ],
+   "target_pct": null
+  },
+  "fade the e&p extension into the crude break": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short 5-year breakevens": {
+   "legs": [],
+   "target_pct": null
+  },
+  "long smh / short ewy": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "own healthcare and biotech": {
+   "legs": [
+    {
+     "id": "IBB",
+     "side": "long",
+     "weight": 0.6
+    },
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 0.4
+    }
+   ],
+   "target_pct": null
+  },
+  "short coinbase": {
+   "legs": [
+    {
+     "id": "COIN",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the gold/silver ratio": {
+   "legs": [
+    {
+     "id": "SILVER",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "health care leadership": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 7.5
+  },
+  "crypto beta": {
+   "legs": [
+    {
+     "id": "MSTR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 22.0
+  },
+  "energy over industrials": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "developed ex-us over em": {
+   "legs": [
+    {
+     "id": "EFA",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "housing on a false rate signal": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 9.0
+  },
+  "sell the duration rally via tlt puts": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "own s&p downside while vol is still at the 28th percentile": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long xle vs short spy": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long xlv vs short xlk": {
+   "legs": [
+    {
+     "id": "XLV",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLK",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long ita (defense catch-up to lmt)": {
+   "legs": [
+    {
+     "id": "ITA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "equal-weight over the nasdaq": {
+   "legs": [
+    {
+     "id": "SPW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "QQQ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "energy equity, the only up-tape": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 0.67
+    },
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 0.33
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "fade the two-sigma duration rally": {
+   "legs": [
+    {
+     "id": "IEF",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.5
+  },
+  "gold over silver into the liquidation": {
+   "legs": [
+    {
+     "id": "GLD",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SILVER",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "crypto equity beta, not crypto": {
+   "legs": [
+    {
+     "id": "COIN",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "fade the oil-equity extreme": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 17.0
+  },
+  "short the 5-year breakeven": {
+   "legs": [],
+   "target_pct": null
+  },
+  "own the hedge the tape won't price": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "silver against gold": {
+   "legs": [
+    {
+     "id": "SILVER",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "silver over gold": {
+   "legs": [
+    {
+     "id": "SILVER",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "fade the defensive blow-off in lmt": {
+   "legs": [
+    {
+     "id": "LMT",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "ITA",
+     "side": "long",
+     "weight": 1.5
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short hyg — credit catches down to vol": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 2.0
+  },
+  "short xop — the energy mark is still stale": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long itb — duration rally in equity form": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long xlf / short xlk": {
+   "legs": [
+    {
+     "id": "XLF",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLK",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "long eww / short ewz": {
+   "legs": [
+    {
+     "id": "EWW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWZ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long volatility into the midterm/amd window": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "short tlt / short duration": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long xly vs short xlp": {
+   "legs": [
+    {
+     "id": "XLY",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 6.0
+  },
+  "long smh call spread": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long eww vs short ewz": {
+   "legs": [
+    {
+     "id": "EWW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWZ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short xle into stale marks": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short lmt vs long ita": {
+   "legs": [
+    {
+     "id": "LMT",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "ITA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long grid / electrification basket": {
+   "legs": [
+    {
+     "id": "GRID",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "gold miners catch-up to the metal": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 14.0
+  },
+  "short energy equities vs long s&p": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 0.6
+    },
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 0.4
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long sterling against the dollar": {
+   "legs": [
+    {
+     "id": "GBPUSD",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long europe, short japan": {
+   "legs": [
+    {
+     "id": "EWG",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "EWU",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "EWJ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "mean-revert the dispersion extreme": {
+   "legs": [
+    {
+     "id": "QQQ",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "SPW",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 4.0
+  },
+  "long usd/brl": {
+   "legs": [
+    {
+     "id": "USDBRL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the ai power/electrification complex": {
+   "legs": [
+    {
+     "id": "VST",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "ETN",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "long germany/uk vs short korea": {
+   "legs": [
+    {
+     "id": "EWG",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "EWU",
+     "side": "long",
+     "weight": 0.5
+    },
+    {
+     "id": "EWY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long gold miners vs the metal": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 0.6
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "fade the stretched duration rally": {
+   "legs": [
+    {
+     "id": "TLT",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "high yield is the last domino": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "energy equity catches up to $99 brent": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "long",
+     "weight": 0.6
+    },
+    {
+     "id": "XLE",
+     "side": "long",
+     "weight": 0.4
+    },
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 0.5
+    }
+   ],
+   "target_pct": null
+  },
+  "gold miners, the only working hedge": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 17.0
+  },
+  "short the crypto-equity premium": {
+   "legs": [
+    {
+     "id": "MSTR",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IBIT",
+     "side": "long",
+     "weight": 0.55
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "fade the vix term-structure panic": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "housing gets the cuts before chips do": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "XLI",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "india over korea": {
+   "legs": [
+    {
+     "id": "INDA",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 20.0
+  },
+  "high yield catch-down": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "fuel winners vs oil services": {
+   "legs": [
+    {
+     "id": "JETS",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "OIH",
+     "side": "short",
+     "weight": 0.8
+    }
+   ],
+   "target_pct": 15.0
+  },
+  "short the real": {
+   "legs": [
+    {
+     "id": "USDBRL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "fade the vol backwardation": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "long india / short brazil": {
+   "legs": [
+    {
+     "id": "INDA",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWZ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "short aud/usd": {
+   "legs": [
+    {
+     "id": "AUDUSD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "buy the tail into the squeeze": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short the crowded defensive": {
+   "legs": [
+    {
+     "id": "MCD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "gold miners over bullion": {
+   "legs": [
+    {
+     "id": "GDX",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "GLD",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "long india vs short broad em": {
+   "legs": [
+    {
+     "id": "INDA",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short e&p into the oil break": {
+   "legs": [
+    {
+     "id": "XOP",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "fade the inverted vix curve": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "short hy credit vs loans": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "BKLN",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "long homebuilders on the duration rally": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "energy equities mark to $92 brent": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "buy vol back at a 19 handle": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "fade the ai-power squeeze": {
+   "legs": [
+    {
+     "id": "VST",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "GEV",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "NLR",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "long india vs short brazil": {
+   "legs": [
+    {
+     "id": "INDA",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EWZ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 12.0
+  },
+  "credit never confirmed the bounce": {
+   "legs": [
+    {
+     "id": "HYG",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "IEF",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 3.0
+  },
+  "housing priced cuts that got repriced": {
+   "legs": [
+    {
+     "id": "ITB",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "short brazil, long mexico": {
+   "legs": [
+    {
+     "id": "EWZ",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "EWW",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "fade the semiconductor squeeze": {
+   "legs": [
+    {
+     "id": "SMH",
+     "side": "short",
+     "weight": 1.0
+    },
+    {
+     "id": "SPY",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 10.0
+  },
+  "energy equities mark to crude": {
+   "legs": [
+    {
+     "id": "XLE",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "re-buy protection at vix 20": {
+   "legs": [
+    {
+     "id": "SPY",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": null
+  },
+  "india versus the em index": {
+   "legs": [
+    {
+     "id": "INDA",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "EEM",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 8.0
+  },
+  "breadth over the index leaders": {
+   "legs": [
+    {
+     "id": "SPW",
+     "side": "long",
+     "weight": 1.0
+    },
+    {
+     "id": "QQQ",
+     "side": "short",
+     "weight": 1.0
+    }
+   ],
+   "target_pct": 5.0
+  }
+ }
+}

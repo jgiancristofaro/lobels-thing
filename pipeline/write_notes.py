@@ -69,9 +69,28 @@ SCHEMA = {
                     "target": {"type": "string"},
                     "horizon": {"type": "string"},
                     "ids": {"type": "array", "items": {"type": "string"}},
+                    # Machine-scoreable version of the idea, used by the trade tracker. The prose
+                    # fields above stay the human-facing description.
+                    "legs": {
+                        "type": "array",
+                        "description": "1 to 3 legs: the liquid stand-in used to score this idea.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {"type": "string", "description": "An id from the TRADABLE list only."},
+                                "side": {"type": "string", "enum": ["long", "short"]},
+                                "weight": {"type": "number", "description": "Relative dollar weight, e.g. 1 or 0.5."},
+                            },
+                            "required": ["id", "side", "weight"], "additionalProperties": False,
+                        },
+                    },
+                    "horizon_days": {"type": "integer", "description": "Calendar days to hold, matching 'horizon'."},
+                    "stop_pct": {"type": "number", "description": "Stop on the combined position, % (negative, e.g. -6)."},
+                    "target_pct": {"type": "number", "description": "Target on the combined position, % (positive, e.g. 10)."},
                 },
                 "required": ["dir", "name", "line", "conviction", "expr", "thesis",
-                             "trigger", "stop", "target", "horizon", "ids"],
+                             "trigger", "stop", "target", "horizon", "ids",
+                             "legs", "horizon_days", "stop_pct", "target_pct"],
                 "additionalProperties": False,
             },
         },
@@ -107,6 +126,16 @@ different themes - don't make all of them rates trades. Every "ids" array must c
 that appear in the digest below (they become clickable chart links - a made-up id breaks the \
 link), and every trade needs a concrete trigger (why now, citing the data), a stop (what proves \
 it wrong) and a target.
+
+Every trade is also scored mechanically after the fact, so give each one a "legs" array: 1-3 \
+legs that express the core directional view with liquid instruments, using ONLY ids from the \
+TRADABLE list in the user message, each with a side (long/short) and a relative dollar weight. \
+This is the stand-in used for scoring, not a restatement of "expr": an options structure becomes \
+a position in its underlying, a futures trade becomes the closest tradable proxy, and a pair \
+becomes its two legs. Also give "horizon_days" (calendar days, consistent with "horizon"), \
+"stop_pct" (negative %, the loss on the combined position that means the idea failed) and \
+"target_pct" (positive %, the gain that means it worked), sized consistently with your prose \
+stop and target.
 
 Output must be valid JSON matching the provided schema. Nothing outside the JSON."""
 
@@ -160,7 +189,45 @@ def build_digest(data):
     return "\n".join(lines)
 
 
-def validate(notes, valid_ids):
+def tradable_ids(valid_ids):
+    """Investable series that can serve as scoring legs: Yahoo-sourced ETFs, stocks, FX, futures
+    and crypto. Excludes index levels (^VIX, ^GSPC, foreign indices) that can't be held."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from universe import U
+
+    return {u["id"] for u in U
+            if u["src"] == "yf" and not u["sym"].startswith("^") and not u["sym"].endswith(".SS")
+            and u["id"] in valid_ids}
+
+
+def clean_scoring(t, tradable):
+    """Sanitize the machine-scoring fields. Never raises: a bad value is dropped or set to None
+    so these fields can't fail a run that would otherwise publish fine. A trade left with no
+    valid legs is simply not tracked."""
+    legs, seen = [], set()
+    for leg in t.get("legs") or []:
+        if not isinstance(leg, dict):
+            continue
+        lid, side, w = leg.get("id"), leg.get("side"), leg.get("weight")
+        if lid not in tradable or lid in seen or side not in ("long", "short"):
+            continue
+        if not isinstance(w, (int, float)) or isinstance(w, bool) or not (0 < w <= 5):
+            continue
+        legs.append({"id": lid, "side": side, "weight": round(float(w), 4)})
+        seen.add(lid)
+    t["legs"] = legs[:3]
+
+    def num_in(v, lo, hi):
+        ok = isinstance(v, (int, float)) and not isinstance(v, bool) and lo <= v <= hi
+        return round(float(v), 2) if ok else None
+
+    h = t.get("horizon_days")
+    t["horizon_days"] = int(h) if isinstance(h, int) and not isinstance(h, bool) and 1 <= h <= 365 else None
+    t["stop_pct"] = num_in(t.get("stop_pct"), -60, -0.5)
+    t["target_pct"] = num_in(t.get("target_pct"), 0.5, 300)
+
+
+def validate(notes, valid_ids, tradable=frozenset()):
     """Coerce the model's output into something safe to publish: drop unknown chart ids rather
     than fail the whole run over one bad reference."""
     def keep_ids(ids):
@@ -186,6 +253,7 @@ def validate(notes, valid_ids):
         for k in ("name", "line", "expr", "thesis", "trigger", "stop", "target", "horizon"):
             assert isinstance(t.get(k), str) and t[k].strip()
         t["ids"] = keep_ids(t.get("ids"))
+        clean_scoring(t, tradable)
     return notes
 
 
@@ -203,6 +271,7 @@ def main():
 
     data = json.loads(DATA_PATH.read_text())
     valid_ids = {s["id"] for s in data["series"]}
+    tradable = tradable_ids(valid_ids)
     digest = build_digest(data)
 
     prev_context = ""
@@ -222,6 +291,7 @@ def main():
     client = anthropic.Anthropic(api_key=api_key)
     user_content = (
         f"Today's data digest, generated {data['generated']}:\n\n{digest}{prev_context}\n\n"
+        f"TRADABLE ids (the only ids allowed in trade legs): {', '.join(sorted(tradable))}\n\n"
         "Write today's read and trade ideas as JSON matching the schema."
     )
 
@@ -257,7 +327,7 @@ def main():
 
     try:
         notes = json.loads(text_blocks[-1])
-        notes = validate(notes, valid_ids)
+        notes = validate(notes, valid_ids, tradable)
     except Exception as e:  # noqa: BLE001
         print(f"Response failed validation, keeping existing notes.json: {e}", file=sys.stderr)
         print(text_blocks[-1][:2000], file=sys.stderr)
@@ -266,7 +336,8 @@ def main():
     notes["asof"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     NOTES_PATH.write_text(json.dumps(notes, indent=2, ensure_ascii=False) + "\n")
     print(f"Wrote {NOTES_PATH}: \"{notes['headline']}\" "
-          f"({len(notes['summary'])} paragraphs, {len(notes['trades'])} trades)")
+          f"({len(notes['summary'])} paragraphs, {len(notes['trades'])} trades, "
+          f"{sum(1 for t in notes['trades'] if t['legs'])} scoreable)")
     print(f"Usage: {response.usage.input_tokens} in / {response.usage.output_tokens} out "
           f"(cache read {response.usage.cache_read_input_tokens})")
     return 0

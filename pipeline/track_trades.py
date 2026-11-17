@@ -238,22 +238,37 @@ def group_stats(ideas):
 
 
 def follow_every_idea(ideas, spy):
-    """Equal-weight daily average of every idea that is open that day, compounded; S&P alongside."""
-    daily = {}
-    for idea in ideas:
-        tl = idea.get("_timeline") or []
-        for (d0, r0), (d1, r1) in zip(tl, tl[1:]):
-            daily.setdefault(d1, []).append((1 + r1 / 100) / (1 + r0 / 100) - 1)
-    if not daily:
+    """Equal-weight daily average of every idea open that day, compounded; S&P alongside.
+
+    Steps on S&P trading days only. Crypto and FX ideas also print on weekends; stepping on
+    those days would let a weekend average be made of just those one or two ideas, which
+    swings the whole curve. Their weekend moves roll into the next trading day instead."""
+    tls = [tl for tl in (idea.get("_timeline") or [] for idea in ideas) if len(tl) > 1]
+    if not tls:
         return []
-    days = sorted(daily)
-    start = days[0] - timedelta(days=1)
+    first = min(tl[0][0] for tl in tls)
+    if spy:
+        days = [d for d in spy[0] if d > first]
+    else:
+        days = sorted({d for tl in tls for d, _ in tl[1:]})
+    if not days:
+        return []
+    series = [([d for d, _ in tl], [r for _, r in tl]) for tl in tls]
+    start = first
     s0 = close_on_or_before(*spy, start) if spy else None
-    level, curve = 100.0, [[start.isoformat(), 100.0, 100.0 if s0 else None]]
+    level, curve, prev = 100.0, [[start.isoformat(), 100.0, 100.0 if s0 else None]], start
     for d in days:
-        level *= 1 + sum(daily[d]) / len(daily[d])
+        moves = []
+        for dates, rets in series:
+            # Open over (prev, d]: entered on or before prev and still marked after prev.
+            if dates[0] <= prev < dates[-1]:
+                r0, r1 = close_on_or_before(dates, rets, prev), close_on_or_before(dates, rets, d)
+                moves.append((1 + r1 / 100) / (1 + r0 / 100) - 1)
+        if moves:
+            level *= 1 + sum(moves) / len(moves)
         s = close_on_or_before(*spy, d) if spy else None
         curve.append([d.isoformat(), round(level, 2), round(100 * s / s0, 2) if s0 and s else None])
+        prev = d
     return curve
 
 

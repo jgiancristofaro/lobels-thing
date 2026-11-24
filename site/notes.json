@@ -1,14 +1,86 @@
 {
-  "headline": "The squeeze finished its lap around the globe overnight — Taiwan +9%, Korea +7% — and bitcoin still printed a lower low at 60,338.",
+  "headline": "The global squeeze died in one session — SMH -8.0% and NVDA back to 152 — but the money rotated into staples, retail and biotech rather than leaving the tape.",
   "summary": [
-    "What changed since yesterday is geography, not substance. The US gamma-unwind got exported: TWII +9.0%, KS11 +7.0% to 5,039, N225 +4.0%, with the ETF mirrors EWT +18.0% and EWY +10.1% closing the gap to a session Asia never traded. TSM +14.1%, MU +19.0%, ASML +9.3%, SMH +15.0%, SOXX +13.6%, NVDA +31.5% to 165.05. Volatility surrendered: VIX -25.8% to 26.62, VIX3M -17.6% to 25.50. And the front end finally broke the other way — 2y -13bp to 4.63, 5y -15bp to 4.71, 10y -12bp to 4.92, 10y real -11bp to 2.77. On paper that is the whole bull case: lower discount rate, lower vol, global catch-up.",
-    "The instruments that trade continuously refused to ratify it. Bitcoin is 60,338, -1.3% on the session and -24.6% on the month, at the 4.6th percentile of its 52-week range; ETH -27.1% and SOL -29.3% over a month. Equities squeezed 5-7% and crypto made a new low — that is a liquidity signature, not a sentiment one. The dollar did the same: DXY 104.27, 100th percentile, z=1.16 with acceleration +0.64; EURUSD 1.0912 and GBPUSD 1.3037 both at the 0th percentile; USDCAD z=1.45 acc +1.14; USDBRL +17.4% on the month with z=4.75 and acceleration +3.52. And credit never moved. HY OAS 3.76 (+24bp on the day, +49bp on the month), CCC 14.02 (+95bp/+365bp over 1m/3m), BBB 1.22, IG 0.98 — all four at the 100th percentile of the past year. VIX/VIX3M is still 1.0439, backwardated at the 71st percentile. Risk regime improved two points to -19; credit & vol and dollar are both pinned at -56.",
-    "The macro underneath is a disinflation shock crashing into a front end that hasn't been told. Brent -6.8% to 86.29 and -26.1% on the month, WTI 79.75 (-22.8%), gasoline -25.9%, DBC with a 1m z of -3.01 and acceleration -2.44. Breakevens have capitulated: 5-year 2.15 (-33bp, z=-1.58), 10-year 2.13 (-21bp), both the 0th percentile of the year. Yet the 3-month bill sits at 4.32% against an effective funds rate of 3.88%, 3m10y has flattened 23bp in a week to 55bp, and the 10-year real yield is 2.77%, 85th percentile and 22% above its 200-day. That is passive tightening into collapsing nominal growth, with core CPI still turning up (+30bp, z=0.93) and the inflation composite at 63. Copper -15.0% on the month, FCX -23.7%, CAT -20.2% (z=-2.29), AUDUSD z=-2.15, AUDJPY -4.1%: the cycle-sensitive complex is not buying the tech bounce either.",
-    "So own the dispersion, not the beta. The winners of a cheaper-barrel, stronger-dollar world keep working: India (BSESN +12.7% 1m, z=3.01, INDA rel. strength +18.1%, USDINR -1.9%), health care (XLV rel. strength +5.3%/+8.7%, IBB up-trend), and the defensive cash machines — MCD +11.2% on the month (z=2.05), TGT +10.9%, COST +9.6%, UPS +9.0%, WMT +8.1%, HD +8.2%. The losers keep losing: Brazil (BVSP -19.6%, EWZ -31.3% with acceleration -3.75), Argentina -22.6%, REMX -12.6%, NLR -11.5%. One genuine new development: precious metals have stopped being margin collateral — gold +3.2% to 3,629.6 and silver +3.4%, GDX +6.4%, GDXJ +7.0%, with real yields finally falling. Gold sits at the 6th percentile of its 52-week range and the gold/silver ratio at 85.6 is the 99.8th percentile. That's where the forced-seller mispricing now lives."
+    "Yesterday's melt-up was a gamma event, and it fully round-tripped in semis. NVDA -7.7% to 152.33 after printing 165.05, MU -11.0%, AMD -10.7%, SOXX -8.9%, SMH -8.0%, TSM -6.0%, ASML -4.3%. But the index damage was contained: NDX -2.4%, SPX -0.9%, DJI +0.2%, RUT +0.1%. Underneath, breadth actually improved — RSP/SPY +1.2% to the 91st percentile of its year with a 1m z of 2.23, IWM/SPY +0.9%, QQQ/SPY -1.5% to the 5th percentile. Software held while silicon broke: IGV +0.5%, IGV/SMH +9.2% on the day and +7.8% on the month. This is an AI-capex de-rating with an internal rotation, not an indiscriminate liquidation. SMH's relative strength vs the S&P is now -14.7% over 1m and -18.6% over 3m.",
+    "What the squeeze did not fix: volatility, credit, or collateral. VIX +5.9% to 28.18 (+44.9% on the month, z=1.72), VIX3M +4.7% to 26.71, and VIX/VIX3M back up to 1.055 — still backwardated, still rising. Spreads never participated in any rally: HY OAS 3.76 (+49bp 1m), CCC 14.02 (+95bp 1m, +365bp 3m), BBB 1.22, IG 0.98 — all four sitting at the 100th percentile of the past year, with HYG/IEF at a 1m z of -1.22. Crypto printed another lower low: BTC 59,792 (-25.3% 1m, 3rd percentile), ETH -27.8% 1m, SOL -31.7% 1m, MSTR -45.6% 1m, COIN -36.8% 1m. And yesterday's one bullish new development — precious metals bouncing off forced-seller lows — reversed hard: gold -1.8% to 3,586, silver -4.8%, platinum -4.6%, GDXJ -2.8%, with the gold/silver ratio +3.1% to 87.3, the 100th percentile. Collateral is still being sold.",
+    "The macro is a disinflation shock colliding with a front end that still hasn't been told. Brent 86.84, -25.6% on the month; gasoline -25.3%; DBC with a 1m z of -3.16 and acceleration -2.54; 5y breakevens 2.15 and 10y 2.13, both the 0th percentile of the year. Yet the 3m bill is 4.32% against an effective funds rate of 3.88%, the 10y real yield is 2.77% at the 85th percentile and 22% above its 200-day, and 30y mortgages are 7.28%. The belly is finally moving — 2y 4.63 (-25bp in a week), 5y 4.71 (-27bp), 10y 4.92 (-23bp) — and that is where the next leg of relief comes from. Natural gas is the only commodity bid: +15.2% today to 3.669, +39.0% on the month, acceleration z=1.91, against crude's collapse.",
+    "Own the dispersion. The rotation winners added to their lead today: XLV +2.5% (rel. strength +9.0%/+12.5%), IBB +3.4%, XBI +3.9%, LLY +3.2%, IHI +2.1%; XRT +2.3% with XRT/SPY +8.7% on the month, TGT +4.3% (+15.6% 1m, 100th percentile), WMT +2.0%, MCD +12.5% 1m with z=2.29, HD +9.3% 1m; ITB +1.7%, DHI +2.9%. The cycle still says no: copper -3.1% (-15.8% 1m, z=-2.46), COPX -5.4%, FCX -6.1%, XME -3.5%, CAT -2.5% with a 1m z of -2.49, AUDUSD z=-2.10. The dollar eased marginally — DXY 103.87 (-0.4%), USDBRL -1.5% after a +16.0% month, USDCHF -0.6% — but USDMXN +1.3% to its 100th percentile says the EM funding squeeze isn't over. Risk regime -18, credit & vol -58, inflation composite still 63."
   ],
   "good": [
     {
-      "text": "Volatility broke hard: VIX -25.8% to 26.62, VIX3M -17.6% to 25.50, VIX/VIX3M -10.0% — the acute phase of the deleveraging is over for now.",
+      "text": "Breadth improved on a red tape: RSP/SPY +1.2% to the 91st percentile (1m z=2.23), equal-weight S&P only -1.5% on the month vs SPX -5.9%, IWM/SPY +0.9%. The selling is concentrated in AI silicon, not the market.",
+      "ids": [
+        "RSP_SPY",
+        "SPW",
+        "IWM_SPY",
+        "SPX"
+      ]
+    },
+    {
+      "text": "The disinflation shock is now overwhelming: Brent -25.6% and gasoline -25.3% on the month, DBC with a 1m z of -3.16, 5y breakevens 2.15 and 10y 2.13 at the 0th percentile. The 2y has responded, -25bp in a week to 4.63.",
+      "ids": [
+        "BRENT",
+        "GASOLINE",
+        "DBC",
+        "T5YIE",
+        "DGS2"
+      ]
+    },
+    {
+      "text": "Health care is the cleanest uptrend on the board: XLV +2.5% with relative strength +9.0%/+12.5%, IBB +3.4%, XBI +3.9%, LLY +3.2% (+10.7% 1m), IHI +2.1%.",
+      "ids": [
+        "XLV",
+        "IBB",
+        "XBI",
+        "LLY",
+        "IHI"
+      ]
+    },
+    {
+      "text": "Consumer cash machines keep compounding: TGT +4.3% (+15.6% 1m, 100th percentile), MCD +12.5% 1m with z=2.29, WMT +10.2% 1m, HD +9.3% 1m, COST +9.1% 1m, XRT/SPY +8.7% on the month.",
+      "ids": [
+        "TGT",
+        "MCD",
+        "WMT",
+        "HD",
+        "COST",
+        "XRT_SPY"
+      ]
+    },
+    {
+      "text": "Housing is quietly turning up on lower mortgage rates: ITB +1.7% (+4.7% 1m), XHB/SPY +8.5% on the month, DHI +2.9%, 30y mortgage -12bp over a month with acceleration z=-1.82, starts +9.9%.",
+      "ids": [
+        "ITB",
+        "XHB_SPY",
+        "DHI",
+        "MORTGAGE30US",
+        "HOUST"
+      ]
+    },
+    {
+      "text": "The dollar wall cracked a little: DXY -0.4% to 103.87, USDBRL -1.5% after a +16.0% month, USDCHF -0.6%, USDCNY -0.4%. Not a trend change yet, but the marginal funding pressure eased.",
+      "ids": [
+        "DXY",
+        "USDBRL",
+        "USDCHF",
+        "USDCNY"
+      ]
+    }
+  ],
+  "bad": [
+    {
+      "text": "The semiconductor squeeze fully reversed in one session: SMH -8.0%, SOXX -8.9%, NVDA -7.7% to 152.33, MU -11.0%, AMD -10.7%, TSM -6.0%. SMH/SPY is -14.7% over a month at the 21st percentile — the AI leadership trade is being de-rated, not just shaken.",
+      "ids": [
+        "SMH",
+        "SOXX",
+        "NVDA",
+        "MU",
+        "AMD",
+        "SMH_SPY"
+      ]
+    },
+    {
+      "text": "Volatility is re-accelerating from an already elevated base: VIX +5.9% to 28.18 (+44.9% 1m, z=1.72), VIX3M +4.7% to 26.71, and the term structure at 1.055 — backwardation deepening, acceleration z=+0.42.",
       "ids": [
         "VIX",
         "VIX3M",
@@ -16,62 +88,7 @@
       ]
     },
     {
-      "text": "The front end finally helped: 2y -13bp to 4.63, 5y -15bp to 4.71, 10y -12bp to 4.92, 10y real -11bp to 2.77, MOVE -5.1% to 100.9. Belly z-scores of -0.9 to -1.0 mean the rally is real, not noise.",
-      "ids": [
-        "DGS2",
-        "DGS5",
-        "DGS10",
-        "DFII10",
-        "MOVE"
-      ]
-    },
-    {
-      "text": "Asia completed the catch-up without new damage: TWII +9.0%, KOSPI +7.0% to 5,039, N225 +4.0%, EWT +18.0%, EWY +10.1%, TSM +14.1%, ASML +9.3%.",
-      "ids": [
-        "TWII",
-        "KS11",
-        "N225",
-        "EWT",
-        "EWY",
-        "TSM",
-        "ASML"
-      ]
-    },
-    {
-      "text": "Energy disinflation is a real-income tailwind: Brent -26.1% and gasoline -25.9% on the month, DBC 1m z=-3.01, 5y breakevens at 2.15 — the 0th percentile.",
-      "ids": [
-        "BRENT",
-        "GASOLINE",
-        "DBC",
-        "T5YIE"
-      ]
-    },
-    {
-      "text": "Precious metals have exited forced-liquidation: gold +3.2%, silver +3.4%, GDX +6.4%, GDXJ +7.0%, with GDX/gold +3.2% and acceleration turning positive.",
-      "ids": [
-        "GOLD",
-        "SILVER",
-        "GDX",
-        "GDXJ",
-        "GDX_GOLD"
-      ]
-    },
-    {
-      "text": "Defensive compounders and health care keep making relative highs: MCD +11.2% 1m (z=2.05), TGT +10.9%, COST +9.6%, UPS +9.0%, WMT +8.1%; XLP rel. strength +9.7% over 3m, XLV +8.7%.",
-      "ids": [
-        "MCD",
-        "TGT",
-        "COST",
-        "UPS",
-        "WMT",
-        "XLP",
-        "XLV"
-      ]
-    }
-  ],
-  "bad": [
-    {
-      "text": "Credit flatly refused to confirm: HY OAS 3.76 (+24bp d, +49bp m), CCC 14.02 (+95bp m, +365bp 3m), BBB 1.22, IG 0.98 — all at the 100th percentile of the 52-week range while equities squeezed 5%.",
+      "text": "Credit never ratified any of this: HY OAS 3.76 (+49bp 1m), CCC 14.02 (+95bp 1m, +365bp 3m), BBB 1.22, IG 0.98 — all at the 100th percentile of the year, HYG/IEF with a 1m z of -1.22.",
       "ids": [
         "HYOAS",
         "CCCOAS",
@@ -81,215 +98,269 @@
       ]
     },
     {
-      "text": "Crypto made a new low into the equity squeeze: BTC 60,338 (-1.3%, 4.6th percentile, -24.6% 1m), ETH -27.1% 1m, SOL -29.3%, MSTR -42.2%. The marginal liquidity buyer is gone.",
+      "text": "Crypto made another low while equities bounced — the clean liquidity tell. BTC 59,792 (-25.3% 1m, 3rd percentile), ETH -27.8%, SOL -31.7%, MSTR -45.6% on the month, COIN -36.8%.",
       "ids": [
         "BTC",
         "ETH",
         "SOL",
         "MSTR",
-        "IBIT"
+        "COIN"
       ]
     },
     {
-      "text": "The dollar is still the wrecking ball and it is accelerating: DXY 104.27 at the 100th percentile (z=1.16, acc +0.64), EURUSD and GBPUSD at the 0th percentile, USDCAD acc +1.14, USDBRL +17.4% 1m with acc +3.52, CEW -2.3%.",
+      "text": "Collateral liquidation resumed in metals, undoing yesterday's bounce: gold -1.8%, silver -4.8%, platinum -4.6%, GDXJ -2.8%, gold/silver +3.1% to 87.3 at the 100th percentile.",
       "ids": [
-        "DXY",
-        "EURUSD",
-        "GBPUSD",
-        "USDCAD",
-        "USDBRL",
-        "CEW"
+        "GOLD",
+        "SILVER",
+        "PLATINUM",
+        "GDXJ",
+        "AU_AG"
       ]
     },
     {
-      "text": "Passive tightening persists: 3m bill 4.32% versus 3.88% effective funds, 3m10y flattened 23bp in a week to 55bp, 10y real yield 2.77% at the 85th percentile and 22% above its 200-day, 30y mortgage 7.28%.",
-      "ids": [
-        "DGS3MO",
-        "DFF",
-        "T10Y3M",
-        "DFII10",
-        "MORTGAGE30US"
-      ]
-    },
-    {
-      "text": "The cyclical core is still breaking, faster than the index: copper -15.0% 1m (z=-2.35), FCX -23.7%, CAT -20.2% (z=-2.29), COPX -17.7%, XME -11.7%, AUDJPY -4.1%, XOP 1m acceleration -1.96.",
+      "text": "Cyclicals and high beta are still making lows: copper -3.1% (1m z=-2.46), COPX -5.4%, FCX -6.1%, XME -3.5%, CAT z=-2.49, SPHB/SPLV -5.8% on the day to the 5th percentile, MTUM 1m z=-2.69.",
       "ids": [
         "COPPER",
+        "COPX",
         "FCX",
         "CAT",
-        "COPX",
-        "XME",
-        "AUDJPY",
-        "XOP"
-      ]
-    },
-    {
-      "text": "Hedges got trimmed, not replaced: VIX/VIX3M still backwardated at 1.0439 (71st percentile) while SKEW fell 7.5% on the month to the 33rd percentile — low crash demand on top of unhealed plumbing (bank reserves -1.4% 1m, net liquidity -0.8%).",
-      "ids": [
-        "VIXTS",
-        "SKEW",
-        "WRESBAL",
-        "NETLIQ"
+        "SPHB_SPLV",
+        "MTUM"
       ]
     }
   ],
   "trades": [
     {
       "dir": "PAIR",
-      "name": "Short junk, own duration",
-      "line": "Short HYG vs long IEF: spreads at 100th pctile, equities don't care",
+      "name": "Software over silicon",
+      "line": "Long IGV / short SMH: the AI capex de-rating has legs",
       "conviction": 3,
-      "expr": "Short HYG against a dollar-matched long in IEF; or buy 3-month HYG 74 puts financed by selling 80 calls if you prefer convexity.",
-      "thesis": "High-yield is the only market that never retraced. HY OAS widened 24bp on the same day SPX rose 4.7%, CCC is 14.02 after +365bp in three months, and IG/BBB/HY/CCC all sit at the 100th percentile of the 52-week range. With breakevens at the 0th percentile and oil -26% on the month, nominal revenue for levered issuers is falling while funding costs are not. Duration is the hedge: the belly is rallying (5y -15bp) on the same disinflation that kills junk cash flows.",
-      "trigger": "HY OAS +24bp on the day and +49bp on the month (z=1.63); HYG/IEF -1.1% on the month (z=-0.97) despite HYG +0.2%.",
-      "stop": "HY OAS back inside 3.40 and CCC below 13.00 with HYG/IEF reclaiming its 200-day — that would mean the squeeze was a real re-risking.",
-      "target": "HY OAS 4.25-4.50, HYG/IEF down another 4-5%.",
-      "horizon": "6-8 weeks",
+      "expr": "Long IGV, short SMH, dollar-neutral. Size 1:1; roll monthly.",
+      "thesis": "The AI trade is bifurcating. Hardware is being de-rated on capex-cycle and financing risk (CCC spreads +365bp over 3m fund the hyperscaler buildout tail), while software's cash-flow model is untouched. IGV held green on a day SMH fell 8%.",
+      "trigger": "IGV +0.5% versus SMH -8.0% today; IGV/SMH +9.2% on the session, +7.8% on the month, turning up. SMH relative strength vs S&P -14.7% 1m, -18.6% 3m; NVDA -7.7% gave back half of a +31.5% squeeze day.",
+      "stop": "IGV/SMH back below its level before yesterday's squeeze, i.e. the pair giving back 6%; or SMH reclaiming its 200-day (currently -19.3% below it).",
+      "target": "Another 12% on the ratio, taking IGV/SMH toward the 3m gain of +23.4%.",
+      "horizon": "6 weeks",
       "ids": [
-        "HYOAS",
-        "CCCOAS",
-        "HYG",
-        "IEF",
-        "HYG_IEF",
-        "T5YIE"
+        "IGV_SMH",
+        "SMH",
+        "IGV",
+        "NVDA",
+        "MU",
+        "SOXX"
       ],
       "legs": [
         {
-          "id": "HYG",
-          "side": "short",
+          "id": "IGV",
+          "side": "long",
           "weight": 1.0
         },
+        {
+          "id": "SMH",
+          "side": "short",
+          "weight": 1.0
+        }
+      ],
+      "horizon_days": 42,
+      "stop_pct": -6.0,
+      "target_pct": 12.0
+    },
+    {
+      "dir": "PAIR",
+      "name": "Health care funded by the Nasdaq",
+      "line": "Long IBB+XBI vs short QQQ: the only clean uptrend left",
+      "conviction": 3,
+      "expr": "Long 50% IBB / 50% XBI against a short in QQQ, equal dollars.",
+      "thesis": "Biotech has the rarest combination on the board right now: positive absolute trend, positive relative trend, falling real yields and zero exposure to the AI capex unwind. QQQ is the funding leg with the worst internals.",
+      "trigger": "IBB +3.4% and XBI +3.9% today against NDX -2.4%; XLV relative strength +9.0% 1m / +12.5% 3m and up-trending; LLY +3.2%, IHI +2.1%. QQQ/SPY at the 5th percentile of its 52-week range.",
+      "stop": "Pair down 5%, or XBI losing its 200-day (currently +6.5% above it) while QQQ reclaims its own.",
+      "target": "+9% on the pair as the health care relative-strength trend extends.",
+      "horizon": "2 months",
+      "ids": [
+        "IBB",
+        "XBI",
+        "XLV",
+        "QQQ",
+        "QQQ_SPY",
+        "LLY"
+      ],
+      "legs": [
+        {
+          "id": "IBB",
+          "side": "long",
+          "weight": 0.5
+        },
+        {
+          "id": "XBI",
+          "side": "long",
+          "weight": 0.5
+        },
+        {
+          "id": "QQQ",
+          "side": "short",
+          "weight": 1.0
+        }
+      ],
+      "horizon_days": 60,
+      "stop_pct": -5.0,
+      "target_pct": 9.0
+    },
+    {
+      "dir": "PAIR",
+      "name": "Cash flow over beta",
+      "line": "Long XRT+XLP vs short SPHB as high beta breaks down",
+      "conviction": 2,
+      "expr": "Long 50% XRT / 50% XLP, short SPHB, equal dollars.",
+      "thesis": "A $25 drop in crude is a direct transfer to the US consumer, and the tape is already paying for it. Meanwhile the high-beta cohort is being forcibly deleveraged alongside crypto and semis.",
+      "trigger": "SPHB/SPLV -5.8% today to the 5th percentile of its year (1m z=-2.09). XRT +2.3% with XRT/SPY +8.7% on the month (z=1.75); XLP relative strength +10.8%/+14.3%; TGT +4.3%, WMT +2.0%, MCD +12.5% 1m. Gasoline -25.3% on the month.",
+      "stop": "Pair down 5%, or SPHB/SPLV recovering above its 200-day (currently -16.3% below).",
+      "target": "+8% on the pair; exit if HY OAS compresses back under 3.25.",
+      "horizon": "6 weeks",
+      "ids": [
+        "XRT_SPY",
+        "XRT",
+        "XLP",
+        "SPHB_SPLV",
+        "TGT",
+        "GASOLINE"
+      ],
+      "legs": [
+        {
+          "id": "XRT",
+          "side": "long",
+          "weight": 0.5
+        },
+        {
+          "id": "XLP",
+          "side": "long",
+          "weight": 0.5
+        },
+        {
+          "id": "SPHB",
+          "side": "short",
+          "weight": 1.0
+        }
+      ],
+      "horizon_days": 45,
+      "stop_pct": -5.0,
+      "target_pct": 8.0
+    },
+    {
+      "dir": "PAIR",
+      "name": "Gas over oil",
+      "line": "Long natgas / short Brent: the only commodity with a bid",
+      "conviction": 2,
+      "expr": "Long front natural gas futures against short Brent, equal notional; roll before expiry.",
+      "thesis": "The energy complex has split. Crude is in a supply-driven collapse dragging breakevens to the 0th percentile; natural gas is a domestic, weather- and power-demand asset that is breaking higher independent of the global growth scare.",
+      "trigger": "Natgas +15.2% today to 3.669, +39.0% on the month with acceleration z=+1.91 and turning up; Brent -2.8% to 86.84, -25.6% on the month, 1m z=-2.57 and acceleration -2.54. XOP -18.0% and OIH -16.0% on the month confirm the crude side.",
+      "stop": "Natgas back under 3.20, or Brent reclaiming 92 on an OPEC/geopolitical supply headline.",
+      "target": "+20% on the spread.",
+      "horizon": "5 weeks",
+      "ids": [
+        "NATGAS",
+        "BRENT",
+        "WTI",
+        "XOP",
+        "OIH"
+      ],
+      "legs": [
+        {
+          "id": "NATGAS",
+          "side": "long",
+          "weight": 1.0
+        },
+        {
+          "id": "BRENT",
+          "side": "short",
+          "weight": 1.0
+        }
+      ],
+      "horizon_days": 35,
+      "stop_pct": -12.0,
+      "target_pct": 20.0
+    },
+    {
+      "dir": "SHORT",
+      "name": "Crypto equity beta",
+      "line": "Short MSTR and COIN: new BTC low, no squeeze participation",
+      "conviction": 2,
+      "expr": "Short an equal-weight basket of MSTR and COIN; or buy 2-month put spreads on each.",
+      "thesis": "Crypto equities are levered claims on a bid that no longer exists. Equities squeezed 5-7% yesterday and bitcoin still made a lower low — that is a funding signature. MSTR's collateral model does not survive a sustained sub-60k bitcoin.",
+      "trigger": "BTC 59,792, -2.3% today and -25.3% on the month, 3rd percentile of its year; IBIT -26.4% 1m; MSTR -6.0% today, -17.8% in a week, -45.6% on the month; COIN -4.5% to 103.86 at the 1st percentile. SOL -31.7% 1m.",
+      "stop": "Bitcoin back above 68,000, or a 15% adverse move in the basket on a leverage-driven short squeeze.",
+      "target": "+20% on the short basket toward a BTC retest of 52-54k.",
+      "horizon": "5 weeks",
+      "ids": [
+        "MSTR",
+        "COIN",
+        "BTC",
+        "IBIT",
+        "SOL"
+      ],
+      "legs": [
+        {
+          "id": "MSTR",
+          "side": "short",
+          "weight": 0.5
+        },
+        {
+          "id": "COIN",
+          "side": "short",
+          "weight": 0.5
+        }
+      ],
+      "horizon_days": 35,
+      "stop_pct": -15.0,
+      "target_pct": 20.0
+    },
+    {
+      "dir": "LONG",
+      "name": "Own the belly",
+      "line": "Long IEF: passive tightening meets a 0th-percentile breakeven",
+      "conviction": 2,
+      "expr": "Long IEF outright (7-10y Treasuries); add on any back-up above 4.95% in the 10y.",
+      "thesis": "Real policy is tightening while nominal growth collapses. The 10y real yield at 2.77% sits at the 85th percentile and 22% above its 200-day, the 3m bill at 4.32% is 44bp above effective funds, and 5y breakevens at 2.15 are the lowest of the year. Something has to give, and it is the belly of the curve.",
+      "trigger": "5y -27bp and 10y -23bp over the week; 10y real -11bp; T5YIE -33bp on the month (z=-1.58) and T10YIE -21bp, both the 0th percentile; 3m10y flattened 23bp in a week to 55bp; DBC 1m z=-3.16.",
+      "stop": "10y back above 5.15%, or core CPI accelerating further from +30bp m/m with the inflation composite above 63.",
+      "target": "+3.5% total return in IEF (10y toward 4.50%).",
+      "horizon": "2 months",
+      "ids": [
+        "IEF",
+        "DGS10",
+        "DFII10",
+        "T5YIE",
+        "T10Y3M",
+        "DGS3MO"
+      ],
+      "legs": [
         {
           "id": "IEF",
           "side": "long",
           "weight": 1.0
         }
       ],
-      "horizon_days": 45,
-      "stop_pct": -3.0,
-      "target_pct": 5.0
-    },
-    {
-      "dir": "PAIR",
-      "name": "Fade the beta squeeze",
-      "line": "Short SPHB vs long SPLV after a +8.6% one-day ratio pop",
-      "conviction": 2,
-      "expr": "Short SPHB against long SPLV, dollar-neutral; add to the short on any further 3%+ up-day in the ratio.",
-      "thesis": "High-beta/low-vol ripped 8.6% in a session and is still -8.1% on the month (z=-1.32) at the 20th percentile of the year. Short-covering rallies in the exact names that were margin-called narrow breadth rather than broaden it — RSP/SPY fell 2.0% and IWM/SPY 1.1% on the up-day. With the dollar at the 100th percentile and credit at its widest of the year, leverage does not get re-financed here; it gets re-sold.",
-      "trigger": "SPHB +9.5%, ARKK +8.0%, IPO +8.6% in one session while HY spreads widened and BTC fell; MTUM 1m z=-2.13.",
-      "stop": "Ratio up 7% from entry, or VIX sustained under 20 with HY OAS inside 3.40.",
-      "target": "Round-trip the squeeze: ratio back to the lows, roughly 10% of relative performance.",
-      "horizon": "4-6 weeks",
-      "ids": [
-        "SPHB_SPLV",
-        "SPHB",
-        "SPLV",
-        "ARKK",
-        "IPO",
-        "MTUM",
-        "RSP_SPY"
-      ],
-      "legs": [
-        {
-          "id": "SPHB",
-          "side": "short",
-          "weight": 1.0
-        },
-        {
-          "id": "SPLV",
-          "side": "long",
-          "weight": 1.0
-        }
-      ],
-      "horizon_days": 30,
-      "stop_pct": -7.0,
-      "target_pct": 10.0
-    },
-    {
-      "dir": "SHORT",
-      "name": "Short MSTR into the bounce",
-      "line": "MSTR +8.5% while BTC printed a new low at 60,338",
-      "conviction": 2,
-      "expr": "Short MSTR outright, or buy 2-month 75 puts. Size small — realized vol is enormous.",
-      "thesis": "Bitcoin is the cleanest liquidity read in the digest and it went the wrong way: -1.3% to 60,338, 4.6th percentile, -24.6% on the month, while QQQ rose 7.0%. MSTR is the levered claim on that reflexivity — down 42.2% in a month, and its +8.5% session is sympathy with equity beta, not inflows. Net liquidity -0.8% on the month and bank reserves -1.4% say the marginal bid doesn't come back this quarter.",
-      "trigger": "BTC and ETH both lower on the overnight session (-1.3%/-1.5%) against a 4-7% US equity squeeze; COIN +6.7% off a -33.9% month; IBIT 7th percentile.",
-      "stop": "BTC closes above 68,000, or MSTR above 102 — that breaks the lower-high sequence.",
-      "target": "MSTR 62-65 on BTC testing the low 50s.",
-      "horizon": "4-6 weeks",
-      "ids": [
-        "MSTR",
-        "BTC",
-        "ETH",
-        "COIN",
-        "IBIT",
-        "NETLIQ"
-      ],
-      "legs": [
-        {
-          "id": "MSTR",
-          "side": "short",
-          "weight": 1.0
-        }
-      ],
-      "horizon_days": 30,
-      "stop_pct": -22.0,
-      "target_pct": 28.0
-    },
-    {
-      "dir": "PAIR",
-      "name": "Long silver vs gold",
-      "line": "Gold/silver 85.6 at the 99.8th pctile — own the cheap metal",
-      "conviction": 2,
-      "expr": "Long silver (futures or SLV-equivalent) against a dollar-matched short in GLD, roughly 1:1 notional.",
-      "thesis": "The gold/silver ratio at 85.6 is the 99.8th percentile of the year after +14.7% in a month, driven by silver being sold as collateral in the deleveraging (-21.0% 1m, 1.9th percentile) rather than by industrial fundamentals. Both metals turned up together this session, and with the 10-year real yield off 11bp and the belly rallying, the precious complex has a tailwind for the first time in three months. Mean reversion in the ratio is the lower-variance way to own that.",
-      "trigger": "Silver +3.4% and gold +3.2% on the day, GDXJ +7.0%, GDX/gold +3.2% with acceleration +0.88; AU_AG 1m z=+2.13.",
-      "stop": "Gold/silver above 92 — that means the liquidation is still running and silver is still collateral.",
-      "target": "Ratio back to 75-77, roughly 11-13% of relative gain.",
-      "horizon": "2-3 months",
-      "ids": [
-        "AU_AG",
-        "SILVER",
-        "GOLD",
-        "GLD",
-        "GDX",
-        "GDXJ",
-        "DFII10"
-      ],
-      "legs": [
-        {
-          "id": "SILVER",
-          "side": "long",
-          "weight": 1.0
-        },
-        {
-          "id": "GLD",
-          "side": "short",
-          "weight": 1.0
-        }
-      ],
       "horizon_days": 60,
-      "stop_pct": -8.0,
-      "target_pct": 12.0
+      "stop_pct": -2.5,
+      "target_pct": 3.5
     },
     {
       "dir": "PAIR",
-      "name": "Oil importer over squeezed silicon",
-      "line": "Long INDA vs short EWT after Taiwan's +18% catch-up day",
+      "name": "India over Taiwan",
+      "line": "Long INDA / short EWT: cheap oil beats the chip cycle",
       "conviction": 2,
-      "expr": "Long INDA against short EWT, dollar-neutral.",
-      "thesis": "India is the purest beneficiary of a -26% monthly move in Brent plus a softening USDINR (-1.9% 1m, z=-1.95): BSESN +12.7% on the month with z=3.01 and relative strength +18.6%. Taiwan is the opposite trade — a semiconductor beta proxy that is still -15.9% on the month after a single +18.0% gap-fill session, with EWT relative strength -11.5%/-10.0% and TWII 1m z=-2.38. Fade the mechanical catch-up, keep the fundamental winner.",
-      "trigger": "EWT +18.0% and TWII +9.0% in one overnight session purely to close the gap to NVDA; INDA -1.4% on the day, giving a better entry on the long leg.",
-      "stop": "Brent back above 100, or INDA/EWT down 8% from entry.",
-      "target": "12% of relative performance as Taiwan gives back half the gap-fill.",
-      "horizon": "6 weeks",
+      "expr": "Long INDA against short EWT, equal dollars.",
+      "thesis": "A $25 crude collapse is the single biggest terms-of-trade gift to India, and the rupee is confirming it. Taiwan is pure semiconductor beta into a de-rating, and yesterday's +9% catch-up gap is prime supply.",
+      "trigger": "INDA +12.8% on the month with a 1m z of 2.87 and acceleration +2.54, relative strength +19.8%/+11.4%; USDINR -1.9% on the month. EWT -5.1% today and -20.2% on the month; TWII rel. strength -7.0%/-5.2%; TSM -6.0%.",
+      "stop": "Pair down 6%, or INDA's 1m momentum z falling back below 1 while semis reclaim their 200-day.",
+      "target": "+10% on the pair.",
+      "horizon": "2 months",
       "ids": [
         "INDA",
-        "BSESN",
         "EWT",
+        "BSESN",
         "TWII",
         "USDINR",
-        "BRENT",
-        "SMH"
+        "TSM"
       ],
       "legs": [
         {
@@ -303,80 +374,9 @@
           "weight": 1.0
         }
       ],
-      "horizon_days": 45,
-      "stop_pct": -8.0,
-      "target_pct": 12.0
-    },
-    {
-      "dir": "PAIR",
-      "name": "Health care over semis",
-      "line": "Long XLV vs short SMH: +8.7% vs -11.3% 3m relative strength",
-      "conviction": 2,
-      "expr": "Long XLV against short SMH at 1:1 notional; use SOXX if SMH borrow is tight.",
-      "thesis": "The only sector in an uptrend with positive relative strength on both horizons is health care: XLV +5.3% 1m and +8.7% 3m vs the S&P, 12% above its 200-day, with IBB in an uptrend and LLY +7.3% on the month. Semis are the opposite — SMH 12.4% below its 200-day, relative strength -8.2%/-11.3%, 1m z=-1.58 even after a 15% session. In a tape where credit is at the widest of the year and the dollar is at the highs, inelastic cash flow beats cyclical capex.",
-      "trigger": "SMH +15.0% in a single squeeze session restores the short at a far better level; XLV +1.2%, IBB +4.6%, with XLV's relative-strength state still 'up' while SMH's is 'rolling over'.",
-      "stop": "SMH reclaims its 200-day (roughly +12% from here) with SMH/SPY above the 50th percentile.",
-      "target": "10% of relative performance.",
-      "horizon": "6-8 weeks",
-      "ids": [
-        "XLV",
-        "IBB",
-        "LLY",
-        "SMH",
-        "SMH_SPY",
-        "SOXX",
-        "XLK"
-      ],
-      "legs": [
-        {
-          "id": "XLV",
-          "side": "long",
-          "weight": 1.0
-        },
-        {
-          "id": "SMH",
-          "side": "short",
-          "weight": 1.0
-        }
-      ],
-      "horizon_days": 45,
-      "stop_pct": -7.0,
+      "horizon_days": 60,
+      "stop_pct": -6.0,
       "target_pct": 10.0
-    },
-    {
-      "dir": "PAIR",
-      "name": "Gas over oil",
-      "line": "Long natgas vs short WTI: +34% vs -23% on the month",
-      "conviction": 1,
-      "expr": "Long front natural gas futures against a short in WTI crude, equal notional. Keep it small — this is the highest-variance idea on the sheet.",
-      "thesis": "The commodity complex is in freefall with DBC's 1m z at -3.01 and acceleration -2.44, but natural gas is the single exception: +34.2% on the month, +13.5% on the week, turning up with acceleration z=+1.73 on winter demand and power load. Crude is the opposite — WTI -5.0% on the day and -22.8% on the month with acceleration -2.22, OPEC supply and weak global demand (copper -15%, AUDUSD z=-2.15) both pressing. Own the structurally tight molecule against the structurally loose one instead of taking outright commodity beta.",
-      "trigger": "NATGAS +3.9% on the same session WTI fell 5.0% and Brent 6.8%; gasoline cracks collapsing (-25.9% 1m) confirms the demand side of the crude short.",
-      "stop": "A warm-weather break below 3.10 in gas, or crude reclaiming 88 on a supply event.",
-      "target": "20% of relative performance over the heating season.",
-      "horizon": "4-6 weeks",
-      "ids": [
-        "NATGAS",
-        "WTI",
-        "BRENT",
-        "GASOLINE",
-        "DBC",
-        "XOP"
-      ],
-      "legs": [
-        {
-          "id": "NATGAS",
-          "side": "long",
-          "weight": 1.0
-        },
-        {
-          "id": "WTI",
-          "side": "short",
-          "weight": 1.0
-        }
-      ],
-      "horizon_days": 30,
-      "stop_pct": -12.0,
-      "target_pct": 20.0
     }
   ],
   "asof": "2026-11-24"
